@@ -3,9 +3,9 @@ REM ── Snake Game Build Script ───────────────
 REM Requires: raylib installed at C:\raylib
 REM Download from https://github.com/raysan5/raylib/releases
 
-set RAYLIB=C:\Users\spamt\Downloads\SnakeGame\raylib
-set SRC=main.cpp snake.cpp food.cpp renderer.cpp
-set OUT=snake.exe
+set RAYLIB=C:\raylib
+set SRC=main.cpp dialogueSystem.cpp
+set OUT=Night of Rizzing DLC.exe
 set FLAGS=-std=c++17 -O2
 
 g++ %FLAGS% %SRC% -o %OUT% ^
@@ -14,7 +14,7 @@ g++ %FLAGS% %SRC% -o %OUT% ^
     -lraylib -lopengl32 -lgdi32 -lwinmm
 
 if %errorlevel%==0 (
-    echo Build successful! Run: snake.exe
+    echo Build successful! Run: Night of Rizzing DLC.exe
 ) else (
     echo Build FAILED. Check your raylib path.
 )

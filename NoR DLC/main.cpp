@@ -1,76 +1,58 @@
 #include "raylib.h"
-#include "snake.h"
-#include "food.h"
-#include "renderer.h"
-
-// ── Grid / window settings ────────────────────────────────────
-const int CELL_SIZE = 24;
-const int COLS      = 30;
-const int ROWS      = 25;
-const int SCREEN_W  = CELL_SIZE * COLS;
-const int SCREEN_H  = CELL_SIZE * ROWS;
-
-enum GameState { STATE_START, STATE_PLAYING, STATE_GAMEOVER };
+#include "DialogueSystem.h"
 
 int main() {
-    Renderer renderer(SCREEN_W, SCREEN_H, CELL_SIZE, COLS, ROWS);
+    InitWindow(800, 450, "Visual Novel");
+    SetTargetFPS(60);
 
-    Snake  snake(COLS / 2, ROWS / 2, CELL_SIZE);
-    Food   food(COLS, ROWS, CELL_SIZE);
-    int    score     = 0;
-    GameState state  = STATE_START;
+    DialogueSystem dialogue;
+    dialogue.LoadFromFile("assets/dialogue.json");
+    dialogue.StartScene("intro");
 
     while (!WindowShouldClose()) {
 
-        // ── Input ──────────────────────────────────────────────
-        if (state == STATE_START) {
-            if (IsKeyPressed(KEY_ENTER)) state = STATE_PLAYING;
+        // --- Input ---
+        if (dialogue.IsActive() && !dialogue.IsShowingChoice()) {
+            if (IsKeyPressed(KEY_SPACE) || IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
+                dialogue.Advance();
         }
-        else if (state == STATE_PLAYING) {
-            if (IsKeyPressed(KEY_W)) snake.SetDirection(DIR_UP);
-            if (IsKeyPressed(KEY_S)) snake.SetDirection(DIR_DOWN);
-            if (IsKeyPressed(KEY_A)) snake.SetDirection(DIR_LEFT);
-            if (IsKeyPressed(KEY_D)) snake.SetDirection(DIR_RIGHT);
-        }
-        else if (state == STATE_GAMEOVER) {
-            if (IsKeyPressed(KEY_R)) {
-                snake  = Snake(COLS / 2, ROWS / 2, CELL_SIZE);
-                food   = Food(COLS, ROWS, CELL_SIZE);
-                score  = 0;
-                state  = STATE_PLAYING;
+
+        // --- Draw ---
+        BeginDrawing();
+        ClearBackground(BLACK);
+
+        if (dialogue.IsActive()) {
+            const auto& line = dialogue.CurrentLine();
+
+            // Dialogue box
+            DrawRectangle(0, 320, 800, 130, Fade(BLACK, 0.8f));
+            DrawRectangleLines(0, 320, 800, 130, WHITE);
+
+            // Character name
+            DrawText(line.character.c_str(), 30, 330, 20, YELLOW);
+
+            // Dialogue text
+            DrawText(line.text.c_str(), 30, 360, 18, WHITE);
+
+            // Choices
+            if (dialogue.IsShowingChoice()) {
+                const auto& choices = dialogue.Choices();
+                for (int i = 0; i < (int)choices.size(); i++) {
+                    Rectangle btn = { 250, 150.f + i * 50, 300, 40 };
+                    bool hover = CheckCollisionPointRec(GetMousePosition(), btn);
+
+                    DrawRectangleRec(btn, hover ? DARKGRAY : GRAY);
+                    DrawText(choices[i].label.c_str(), (int)btn.x + 10, (int)btn.y + 10, 18, WHITE);
+
+                    if (hover && IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
+                        dialogue.SelectChoice(i);
+                }
             }
         }
 
-        // ── Update ─────────────────────────────────────────────
-        if (state == STATE_PLAYING) {
-            snake.Move();
-
-            if (snake.CheckWallCollision(COLS, ROWS) || snake.CheckSelfCollision())
-                state = STATE_GAMEOVER;
-
-            if (snake.GetHeadX() == food.GetX() && snake.GetHeadY() == food.GetY()) {
-                snake.Grow();
-                score += 10;
-                food.Respawn(snake.bodyX, snake.bodyY, snake.GetLength());
-            }
-        }
-
-        // ── Draw ───────────────────────────────────────────────
-        renderer.BeginFrame();
-        renderer.DrawGrid();
-
-        if (state == STATE_START) {
-            renderer.DrawStartScreen();
-        } else {
-            renderer.DrawSnake(snake);
-            renderer.DrawFood(food);
-            renderer.DrawScore(score);
-            if (state == STATE_GAMEOVER)
-                renderer.DrawGameOver(score);
-        }
-
-        renderer.EndFrame();
+        EndDrawing();
     }
 
+    CloseWindow();
     return 0;
 }
