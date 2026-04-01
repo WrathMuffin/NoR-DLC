@@ -5,7 +5,7 @@ REM Download from https://github.com/raysan5/raylib/releases
 
 set RAYLIB=C:\raylib
 set SRC=main.cpp dialogueSystem.cpp
-set OUT=Night of Rizzing DLC.exe
+set OUT="Night of Rizzing DLC.exe"
 set FLAGS=-std=c++17 -O2
 
 g++ %FLAGS% %SRC% -o %OUT% ^
