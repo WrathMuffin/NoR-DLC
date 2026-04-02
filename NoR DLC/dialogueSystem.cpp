@@ -86,3 +86,10 @@ void DialogueSystem::SelectChoice(int index) {
 
     GoToScene(currentScene->choices[index].nextScene);
 }
+
+const DialogueLine& DialogueSystem::CurrentLine() const {
+    static DialogueLine empty{};
+    if (!currentScene || lineIndex >= (int)currentScene->lines.size())
+        return empty;
+    return currentScene->lines[lineIndex];
+}

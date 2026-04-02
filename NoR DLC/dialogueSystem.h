@@ -32,8 +32,9 @@ public:
 
     bool IsActive()       const { return active; }
     bool IsShowingChoice()const { return showChoices; }
+    
 
-    const DialogueLine&            CurrentLine()   const { return currentScene->lines[lineIndex]; }
+    const DialogueLine& CurrentLine() const;
     const std::vector<DialogueChoice>& Choices()   const { return currentScene->choices; }
 
 private:
