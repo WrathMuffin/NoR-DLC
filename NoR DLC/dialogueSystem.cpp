@@ -5,16 +5,16 @@
 //I searched that nlohmann is good
 using json = nlohmann::json;
 
-bool DialogueSystem::LoadFromFile(const std::string& path) {
-    std::ifstream file(path);
+bool DialogueSystem::LoadFromFile(const string& path) {
+    ifstream file(path);
     if (!file.is_open()) {
-        std::cerr << "Failed to open dialogue file: " << path << "\n";
+        cerr << "Failed to open dialogue file: " << path << "\n";
         return false;
     }
 
     json data = json::parse(file, nullptr, /*exceptions=*/false);
     if (data.is_discarded()) {
-        std::cerr << "Failed to parse JSON: " << path << "\n";
+        cerr << "Failed to parse JSON: " << path << "\n";
         return false;
     }
 
@@ -38,27 +38,27 @@ bool DialogueSystem::LoadFromFile(const std::string& path) {
             });
         }
 
-        scenes[scene.id] = std::move(scene);
+        scenes[scene.id] = move(scene);
     }
 
-    std::cout << "Loaded " << scenes.size() << " scenes.\n";
+    cout << "Loaded " << scenes.size() << " scenes.\n";
     return true;
 }
 
-void DialogueSystem::GoToScene(const std::string& id) {
-    auto it = scenes.find(id);
-    if (it == scenes.end()) {
-        std::cerr << "Scene not found: " << id << "\n";
+void DialogueSystem::GoToScene(const string& id) {
+    auto sceneId = scenes.find(id);
+    if (sceneId == scenes.end()) {
+        cerr << "Scene not found: " << id << "\n";
         active = false;
         return;
     }
-    currentScene = &it->second;
+    currentScene = &sceneId->second;
     lineIndex    = 0;
     showChoices  = false;
     active       = true;
 }
 
-void DialogueSystem::StartScene(const std::string& sceneId) {
+void DialogueSystem::StartScene(const string& sceneId) {
     GoToScene(sceneId);
 }
 

@@ -4,17 +4,25 @@
 void Renderer::Load() {
     //background = LoadTexture("assets/bg_forest.png");
 
-    portraits["aria_neutral"] = LoadTexture("assets/Suni_128_x_128.png");
+    spriteSheet = LoadTexture("assets/Suni_128_x_128.png");
+
+    portraits["neutral"] = {0,0};
+    portraits["angry"] = {1,0};
+    portraits["happy"] = {2,0};
+    portraits["dizzy"] = {3,0};
+    portraits["blank"] = {4,0};
 }
 
 //to unload textures to free up memory (at the end of the program)
 void Renderer::Unload() 
 {
     UnloadTexture(background);
-    for (auto& [key, tex] : portraits)
+    UnloadTexture(spriteSheet);
+
+    /* for (auto& [key, tex] : portraits)
     {
         UnloadTexture(tex);
-    }
+    } */
 }
 
 void Renderer::Draw(const DialogueSystem& dialogue) 
@@ -44,10 +52,29 @@ void Renderer::DrawPortrait(const string& portrait)
 {
     if (portrait.empty() || !portraits.count(portrait)) return;
 
-    Texture2D& tex = portraits[portrait];
-    int x = (800 - tex.width) / 2;
-    int y = 320 - tex.height;
-    DrawTexture(tex, x, y, WHITE);
+    Vector2 frame = portraits[portrait];
+
+    // Crop 128x128 frame from the sheet to get the correct sprite
+    Rectangle spriteSrc = 
+    {
+        frame.x * FRAME_SIZE,   // x offset into sheet
+        frame.y * FRAME_SIZE,   // y offset into sheet
+        FRAME_SIZE,
+        FRAME_SIZE
+    };
+    
+    float drawSize = FRAME_SIZE * PORTRAIT_SCALE;
+
+
+    Rectangle dest = 
+    {
+        (800 - drawSize) / 2,
+        320 - drawSize,
+        drawSize,
+        drawSize
+    };
+
+    DrawTexturePro(spriteSheet, spriteSrc, dest, { 0, 0 }, 0.0f, WHITE);
 }
 
 void Renderer::DrawDialogueBox(const DialogueSystem& dialogue) 
