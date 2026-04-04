@@ -6,22 +6,23 @@
 
 using namespace std;
 
-class Renderer {
+class Renderer
+{
 public:
     void Load();
     void Unload();
-    void Draw(const DialogueSystem& dialogue);
+    void Draw(const DialogueSystem &dialogue);
 
 private:
     void DrawBackground();
-    void DrawPortrait(const string& portrait);
-    void DrawDialogueBox(const DialogueSystem& dialogue);
-    void DrawChoices(const DialogueSystem& dialogue);
+    void DrawPortrait(const string &portrait);
+    void DrawDialogueBox(const DialogueSystem &dialogue);
+    void DrawChoices(const DialogueSystem &dialogue);
 
-    Texture2D background;
-    Texture2D spriteSheet;
+    Texture2D background[3];
+    Texture2D spriteSheet[2];
 
-    //this contains the name and the column + row from the spriteSheet, key(string name) and value(column and row)
+    // this contains the name and the column + row from the spriteSheet, key(string name) and value(column and row)
     unordered_map<string, Vector2> portraits;
 
     static constexpr int FRAME_SIZE = 128;
