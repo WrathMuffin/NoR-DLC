@@ -32,3 +32,4 @@
 *.app
 NoR DLC/.vscode/c_cpp_properties.json
 NoR DLC/.vscode/settings.json
+NoR DLC/.editorconfig

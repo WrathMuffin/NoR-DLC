@@ -2,51 +2,521 @@
   "scenes": [
     {
       "id": "intro",
-      "next": "forest",
+      "next": "",
       "lines": [
-        { "character": "Suni", "text": "Hello, traveler.", "portrait": "suniNeutral", "portrait2": "suniHappy" },
-        { "character": "Suni", "text": "We've been expecting you.", "portrait": "suniHappy", "portrait2": "" }
+        {
+          "character": "Narrator",
+          "text": "It has been days since your first nightshift. It was crazy but... in the end it all \nsurprisingly went well!",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "Hmmm, let's see what's going on today...",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "HUH?!? WHERE'S MY DAILY EPIK-GAMER-ULTRA-GACHA EDITION MAGAZINE?!?",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "The Night Guard is truly suffering while looking at the desk, naked and bare, empty... \nno epik-gamer-ultra-gacha edition magazine to be seen. *Sadge*",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "NOOO! I swear it was right here-WAIT a minute",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "Unless...",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "SUNI! Get over here!",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "*Gamer gumbles* Alrite, I think you have something of mine, don't you...?",
+          "portrait": "suniGremlin"
+        },
+        {
+          "character": "Suni",
+          "text": "Ehehehe, wu-wuah... :P",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "What'd you talking about :3",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "Oh you know exactly what I'm talking about!",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "Hehehe... nope! :P",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "Uh huh...",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        }
       ],
-      "choices": []
+      "choices": [
+        {
+          "label": "Joke",
+          "next_scene": "magazine_good",
+          "score_change": 10
+        },
+        {
+          "label": "Be direct",
+          "next_scene": "magazine_bad",
+          "score_change": 0
+        }
+      ]
     },
+
+
+
+
+
+    {
+      "id": "magazine_good",
+      "next": "magazine_aftermath",
+      "lines": [
+        {
+          "character": "Night Guard",
+          "text": "Suni, Suni",
+          "portrait": "suniNeutral",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "Uh...\nYes Night Guard?",
+          "portrait": "suniNeutral",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "Hiding paper?",
+          "portrait": "suniNeutral",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "No Night Guard",
+          "portrait": "suniNeutral",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "Telling lies?",
+          "portrait": "suniNeutral",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "No Night Guard, hihihi",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "Open your mouth!",
+          "portrait": "suniNeutral",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "Har har har!!!",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "Suni opens her mouth, and the crumpled magazine fell out into her hands",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        }
+      ]
+    },
+
+
+
+
+
+    
+    {
+      "id": "magazine_bad",
+      "next": "magazine_aftermath",
+      "lines": [
+        {
+          "character": "Night Guard",
+          "text": "Harha... but I'm serious! Give me the magazine dude!",
+          "portrait": "suniPout",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "Awe...fine",
+          "portrait": "suniPout",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "Ur no fun...",
+          "portrait": "suniPout",
+          "portrait2": ""
+        }
+      ]
+    },
+    
+
+
+
+
+    {
+        "id": "magazine_aftermath",
+      "next": "",
+      "lines": [
+        {
+          "character": "Suni",
+          "text": "Anyway, here u go lol",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "...",
+          "portrait": "suniNeutral",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "So...",
+          "portrait": "suniNeutral",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "Ya see anything new? :P",
+          "portrait": "suniNeutral",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "Just the same old, following my fav streamer and game, cause Im a gamer",
+          "portrait": "suniNeutral",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "Oh, haha",
+          "portrait": "suniNeutral",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "Uh, I don't know much about this stuff since.. well, I'm stuck here lol",
+          "portrait": "suniNeutral",
+          "portrait2": ""
+        }
+      ],
+      "choices": [
+        {
+          "label": "Share",
+          "next_scene": "content_good",
+          "score_change": 10
+        },
+        {
+          "label": "Awkward",
+          "next_scene": "content_bad",
+          "score_change": 0
+        }
+      ]
+    },
+
+
+
+
+
+    {
+      "id": "content_good",
+      "next": "",
+      "lines": [
+        {
+          "character": "Night Guard",
+          "text": "Nah nah, it's not your fault, wanna see then?",
+          "portrait": "suniNeutral",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "REALLY!?! Oh! Wait!",
+          "portrait": "suniNeutral",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "CAN WE GO TO THE TOILET ROOM!?!",
+          "portrait": "suniHappy",
+          "portrait2": ""
+        }
+      ],
+      "choices": [
+        {
+          "label": "Yes",
+          "next_scene": "toilet_good",
+          "score_change": 10
+        },
+        {
+          "label": "No",
+          "next_scene": "toilet_bad",
+          "score_change": 0
+        }
+      ]
+    },
+
+
+
+
+
+    {
+      "id": "toilet_good",
+      "next": "toilet",
+      "lines": [
+        {
+          "character": "Suni",
+          "text": "Really?!? LESSGO!!!",
+          "portrait": "suniHappy",
+          "portrait2": ""
+        }
+      ],
+      "choices": [
+      ]
+    },
+
+
+
+
+
+    {
+      "id": "toilet_bad",
+      "next": "",
+      "lines": [
+        {
+          "character": "Suni",
+          "text": "Awe.. but its our favourite room remember?",
+          "portrait": "suniPout",
+          "portrait2": ""
+        }
+      ],
+      "choices": [
+        {
+          "label": "On second thought...",
+          "next_scene": "toilet_secondchance_good",
+          "score_change": 10
+        },
+        {
+          "label": "No means no",
+          "next_scene": "toilet_secondchance_bad",
+          "score_change": 0
+        }
+      ]
+    },
+
+
+
+
+
+    {
+      "id": "toilet_secondchance_good",
+      "next": "toilet",
+      "lines": [
+        {
+          "character": "Suni",
+          "text": "Hmmmm... alrite!",
+          "portrait": "suniNeutral",
+          "portrait2": ""
+        }
+      ]
+    },
+
+
+
+
+
+    {
+      "id": "toilet_secondchance_bad",
+      "next": "office",
+      "lines": [
+        {
+          "character": "Suni",
+          "text": "Hmph be it that way!",
+          "portrait": "suniAngry",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "But... I won't force you.",
+          "portrait": "suniPout",
+          "portrait2": ""
+        }
+      ],
+      "choices": [
+      ]
+    },
+
+
+
+
+
+    {
+      "id": "content_bad",
+      "next": "",
+      "lines": [
+        {
+          "character": "Narrator",
+          "text": "You awkwardly buries into the magazine, not knowing how to responds to that",
+          "portrait": "suniPout",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "Uh...huh.... hmmmmm *very deep into this magazine bruh*",
+          "portrait": "suniBlank",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "Um, ok, I'll leave you to it then...",
+          "portrait": "suniPout",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "You ended up locking in way too hard onto that magazine, until your shift is over!",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "",
+          "text": "NIGHT 1: END",
+          "portrait": "",
+          "portrait2": ""
+        }
+      ]
+    },
+
+
+
+
+
+    {
+      "id": "toilet",
+      "next": "night 2",
+      "lines": [
+        {
+          "character": "TOILET ROOM",
+          "text": "You guys hanged out in the toilet room.",
+          "portrait": "suniNeutral",
+          "portrait2": ""
+        },
+        {
+          "character": "TOILET ROOM",
+          "text": " You esentially spoiled a game's content to her, but she doen't mind and is \nglad you are just hanging out with her.",
+          "portrait": "suniHappy",
+          "portrait2": ""
+        },
+        {
+          "character": "",
+          "text": "NIGHT 1: END",
+          "portrait": "",
+          "portrait2": ""
+        }
+      ],
+      "choices": [
+      ]
+    },
+
+
+
+
+
+    {
+      "id": "office",
+      "next": "night 2",
+      "lines": [
+        {
+          "character": "THE OFFICE",
+          "text": "You guys hanged out in the office, \nbut she doesn't seem to enjoy what you're saying much.",
+          "portrait": "suniPout",
+          "portrait2": ""
+        },
+        {
+          "character": "THE OFFICE",
+          "text": "...Does she not like the magazine's contents? \nMaybe you could find a more interesting one...?",
+          "portrait": "suniPout",
+          "portrait2": ""
+        },
+        {
+          "character": "",
+          "text": "NIGHT 1: END",
+          "portrait": "",
+          "portrait2": ""
+        }
+      ],
+      "choices": [
+      ]
+    },
+
+
+
+
 
     {
       "id": "forest",
       "next": "",
       "lines": [
-        { "character": "Narrator", "text": "The forest grows dark...", "portrait": "suniDizzy", "portrait2": "" }
+        {
+          "character": "Narrator",
+          "text": "The forest grows dark...",
+          "portrait": "suniDizzy",
+          "portrait2": ""
+        }
       ],
       "choices": [
-        { "label": "Press forward", "next_scene": "path_brave", "score_change": 90},
-        { "label": "Turn back",    "next_scene": "path_coward", "score_change": 0}
+        {
+          "label": "Press forward",
+          "next_scene": "path_brave",
+          "score_change": 90
+        },
+        {
+          "label": "Turn back",
+          "next_scene": "path_coward",
+          "score_change": 0
+        }
       ]
-    },
-
-    {
-      "id": "ending_check",
-      "next": "",
-      "lines": [
-          { "character": "Aria", "text": "So... what do you think of me?", "portrait": "suniNeutral", "portrait2": "" }
-      ],
-      "choices": []
-    },
-
-    {
-    "id": "good_ending",
-    "next": "",
-    "lines": [
-        { "character": "Aria", "text": "I think I really like you.", "portrait": "happy" }
-    ],
-    "choices": []
-    },
-
-    {
-    "id": "bad_ending",
-    "next": "",
-    "lines": [
-        { "character": "Aria", "text": "I don't think this is working out.", "portrait": "sad" }
-    ],
-    "choices": []
     }
   ]
 }
