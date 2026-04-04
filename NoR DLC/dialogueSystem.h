@@ -15,11 +15,12 @@ struct DialogueLine {
 struct DialogueChoice {
     string label;
     string nextScene;
+    float scoreChange = 0.0f;
 };
 
 struct DialogueScene {
     string id;
-    string next;                    // auto-advance if no choices
+    string next; //advance if no choices
     vector<DialogueLine>   lines;
     vector<DialogueChoice> choices;
 };
@@ -39,12 +40,15 @@ public:
     const DialogueLine& CurrentLine() const;
     const vector<DialogueChoice>& Choices()   const { return currentScene->choices; }
 
+    void Tick();
+
 private:
     unordered_map<string, DialogueScene> scenes;
     const DialogueScene* currentScene = nullptr;
     int  lineIndex  = 0;
     bool active     = false;
     bool showChoices= false;
+    bool choiceJustShown = false;
 
     void GoToScene(const string& id);
 };

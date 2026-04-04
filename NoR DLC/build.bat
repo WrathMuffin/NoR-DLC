@@ -4,7 +4,7 @@ REM Requires: raylib installed at C:\raylib
 REM Download from https://github.com/raysan5/raylib/releases
 
 set RAYLIB=C:\raylib
-set SRC=main.cpp dialogueSystem.cpp renderer.cpp
+set SRC=main.cpp dialogueSystem.cpp renderer.cpp Rizzermometer.cpp
 set OUT="Night of Rizzing DLC.exe"
 set FLAGS=-std=c++17 -O2
 

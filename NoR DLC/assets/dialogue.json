@@ -16,8 +16,8 @@
         { "character": "Narrator", "text": "The forest grows dark...", "portrait": "dizzy" }
       ],
       "choices": [
-        { "label": "Press forward", "next_scene": "path_brave" },
-        { "label": "Turn back",    "next_scene": "path_coward" }
+        { "label": "Press forward", "next_scene": "path_brave", "score_change": 0.2},
+        { "label": "Turn back",    "next_scene": "path_coward", "score_change": -0.1}
       ]
     }
   ]

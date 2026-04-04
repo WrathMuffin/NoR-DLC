@@ -7,6 +7,8 @@ using json = nlohmann::json;
 
 bool DialogueSystem::LoadFromFile(const string& path) {
     ifstream file(path);
+
+    //check and see if the json is able to open or not
     if (!file.is_open()) {
         cerr << "Failed to open dialogue file: " << path << "\n";
         return false;
@@ -34,7 +36,8 @@ bool DialogueSystem::LoadFromFile(const string& path) {
         for (const auto& c : s.value("choices", json::array())) {
             scene.choices.push_back({
                 c.value("label",      ""),
-                c.value("next_scene", "")
+                c.value("next_scene", ""),
+                c.value("score_change", 0.0f)
             });
         }
 
@@ -73,6 +76,7 @@ void DialogueSystem::Advance() {
     // End of lines — show choices or auto-advance
     if (!currentScene->choices.empty()) {
         showChoices = true;
+        choiceJustShown = true;
     } else if (!currentScene->next.empty()) {
         GoToScene(currentScene->next);
     } else {
@@ -92,4 +96,8 @@ const DialogueLine& DialogueSystem::CurrentLine() const {
     if (!currentScene || lineIndex >= (int)currentScene->lines.size())
         return empty;
     return currentScene->lines[lineIndex];
+}
+
+void DialogueSystem::Tick() {
+    if (choiceJustShown) choiceJustShown = false;
 }
