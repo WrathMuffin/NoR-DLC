@@ -101,3 +101,8 @@ const DialogueLine& DialogueSystem::CurrentLine() const {
 void DialogueSystem::Tick() {
     if (choiceJustShown) choiceJustShown = false;
 }
+
+string DialogueSystem::GetCurrentSceneId() const {
+    if (!currentScene) return "";
+    return currentScene->id;
+}

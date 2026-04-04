@@ -3,6 +3,7 @@
 #include "Renderer.h"
 #include "ui.h"
 #include "Rizzermometer.h"
+#include "save.h"
 
 int main() {
     InitWindow(800, 450, "Night of Rizzing DLC");
@@ -18,6 +19,21 @@ int main() {
 
     UI* rizzermometer = new Rizzermometer(100.0f, 20, 20, 200, 20);
 
+    //load in a save if there is one, if not it will just start the intro
+    string savedScene;
+    float  savedScore = 0.0f;
+
+    if (SaveSystem::Load(savedScene, savedScore)) 
+    {
+        dialogue.StartScene(savedScene);
+        static_cast<Rizzermometer*>(rizzermometer)->AddScore(savedScore);
+    } 
+    else 
+    {
+        dialogue.StartScene("intro");
+    }    
+
+    //actual game running
     while (!WindowShouldClose()) 
     {
         dialogue.Tick();
@@ -43,6 +59,14 @@ int main() {
                     dialogue.SelectChoice(i);
                 }
             }
+        }
+
+        if (IsKeyPressed(KEY_S)) 
+        {
+            SaveSystem::Save(
+                dialogue.GetCurrentSceneId(),
+                static_cast<Rizzermometer*>(rizzermometer)->GetScore()
+            );
         }
 
         rizzermometer->Update();

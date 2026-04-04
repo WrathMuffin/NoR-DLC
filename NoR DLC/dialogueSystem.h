@@ -41,6 +41,7 @@ public:
     const vector<DialogueChoice>& Choices()   const { return currentScene->choices; }
 
     void Tick();
+    string GetCurrentSceneId() const;
 
 private:
     unordered_map<string, DialogueScene> scenes;
