@@ -4,21 +4,49 @@
       "id": "intro",
       "next": "forest",
       "lines": [
-        { "character": "Fox Girl", "text": "Hello, traveler.", "portrait": "neutral" },
-        { "character": "Fox Girl", "text": "We've been expecting you.", "portrait": "happy" }
+        { "character": "Suni", "text": "Hello, traveler.", "portrait": "suniNeutral", "portrait2": "suniHappy" },
+        { "character": "Suni", "text": "We've been expecting you.", "portrait": "suniHappy", "portrait2": "" }
       ],
       "choices": []
     },
+
     {
       "id": "forest",
       "next": "",
       "lines": [
-        { "character": "Narrator", "text": "The forest grows dark...", "portrait": "dizzy" }
+        { "character": "Narrator", "text": "The forest grows dark...", "portrait": "suniDizzy", "portrait2": "" }
       ],
       "choices": [
-        { "label": "Press forward", "next_scene": "path_brave", "score_change": 0.2},
-        { "label": "Turn back",    "next_scene": "path_coward", "score_change": -0.1}
+        { "label": "Press forward", "next_scene": "path_brave", "score_change": 90},
+        { "label": "Turn back",    "next_scene": "path_coward", "score_change": 0}
       ]
+    },
+
+    {
+      "id": "ending_check",
+      "next": "",
+      "lines": [
+          { "character": "Aria", "text": "So... what do you think of me?", "portrait": "suniNeutral", "portrait2": "" }
+      ],
+      "choices": []
+    },
+
+    {
+    "id": "good_ending",
+    "next": "",
+    "lines": [
+        { "character": "Aria", "text": "I think I really like you.", "portrait": "happy" }
+    ],
+    "choices": []
+    },
+
+    {
+    "id": "bad_ending",
+    "next": "",
+    "lines": [
+        { "character": "Aria", "text": "I don't think this is working out.", "portrait": "sad" }
+    ],
+    "choices": []
     }
   ]
 }

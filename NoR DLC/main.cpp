@@ -7,7 +7,7 @@
 
 int main() {
     InitWindow(800, 450, "Night of Rizzing DLC");
-    SetTargetFPS(10); //its a visual novel so 10 fps should be enough
+    SetTargetFPS(12); //its a visual novel so 12 fps should be enough
 
     //loads in the dialogue from the json file
     DialogueSystem dialogue;
@@ -41,9 +41,15 @@ int main() {
         // get input from the player either from mouse click or spacebar
         if (dialogue.IsActive() && !dialogue.IsShowingChoice()) 
         {
-            if (IsKeyPressed(KEY_SPACE) || IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
+            if (IsKeyPressed(KEY_SPACE))
             {
                 dialogue.Advance();
+
+                if (dialogue.GetCurrentSceneId() == "ending_check") 
+                {
+                    float score = static_cast<Rizzermometer*>(rizzermometer)->GetNormalized();
+                    dialogue.CheckScoreBranch(score, "good_ending", "bad_ending");
+                }
             }
         }
 
@@ -55,12 +61,14 @@ int main() {
                 Rectangle btn = { 250, 150.f + i * 50, 300, 40 };
                 if (CheckCollisionPointRec(GetMousePosition(), btn) && IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
                 {
-                    static_cast<Rizzermometer*>(rizzermometer)->AddScore(choices[i].scoreChange * 100.0f);
+                    static_cast<Rizzermometer*>(rizzermometer)->AddScore(choices[i].scoreChange);
                     dialogue.SelectChoice(i);
                 }
             }
-        }
 
+        }
+        
+        //save if S is pressed
         if (IsKeyPressed(KEY_S)) 
         {
             SaveSystem::Save(

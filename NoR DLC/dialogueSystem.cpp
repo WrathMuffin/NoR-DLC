@@ -29,7 +29,8 @@ bool DialogueSystem::LoadFromFile(const string& path) {
             scene.lines.push_back({
                 l.value("character", ""),
                 l.value("text",      ""),
-                l.value("portrait",  "")
+                l.value("portrait",  ""),
+                l.value("portrait2", "")
             });
         }
 
@@ -105,4 +106,12 @@ void DialogueSystem::Tick() {
 string DialogueSystem::GetCurrentSceneId() const {
     if (!currentScene) return "";
     return currentScene->id;
+}
+
+void DialogueSystem::CheckScoreBranch(float normalizedScore, const string& positiveScene, const string& negativeScene)
+{
+    if (normalizedScore >= 0.8f)
+        GoToScene(positiveScene);
+    else
+        GoToScene(negativeScene);
 }

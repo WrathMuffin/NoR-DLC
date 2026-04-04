@@ -16,6 +16,7 @@ public:
 private:
     void DrawBackground();
     void DrawPortrait(const string &portrait);
+    void DrawPortrait(const string &portrait1, const string &portrait2);
     void DrawDialogueBox(const DialogueSystem &dialogue);
     void DrawChoices(const DialogueSystem &dialogue);
 

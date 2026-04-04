@@ -19,7 +19,7 @@ public:
 
     float GetNormalized() const 
     { 
-        //for the UI display percentage
+        //for the UI display percentage and for checking the ending condition
         return score / maxScore; 
     } 
 

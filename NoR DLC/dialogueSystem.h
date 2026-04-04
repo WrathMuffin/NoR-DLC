@@ -10,6 +10,7 @@ struct DialogueLine {
     string character;
     string text;
     string portrait;
+    string portrait2;
 };
 
 struct DialogueChoice {
@@ -42,6 +43,7 @@ public:
 
     void Tick();
     string GetCurrentSceneId() const;
+    void CheckScoreBranch(float normalizedScore, const string& positiveScene, const string& negativeScene);
 
 private:
     unordered_map<string, DialogueScene> scenes;
