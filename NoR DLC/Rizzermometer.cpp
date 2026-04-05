@@ -27,6 +27,7 @@ void Rizzermometer::Update()
     }
 }
 
+// the bar, may replace with a sprite
 void Rizzermometer::Draw()
 {
     float fill = (displayScore / maxScore) * w;

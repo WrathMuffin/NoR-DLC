@@ -26,6 +26,7 @@ private:
     // this contains the name and the column + row from the spriteSheet, key(string name) and value(column and row)
     unordered_map<string, Vector2> portraits;
 
+    // basically the spritesheets gonna be divided into frames, the sheet is 128*128 per frames
     static constexpr int FRAME_SIZE = 128;
     static constexpr float PORTRAIT_SCALE = 2.0f;
 };

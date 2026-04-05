@@ -4,6 +4,7 @@
 
 bool SaveSystem::Save(const string& sceneId, int lineId, float score, const string& path)
 {
+    // readfile from path
     ofstream file(path);
 
     // cant open txt file
@@ -13,7 +14,7 @@ bool SaveSystem::Save(const string& sceneId, int lineId, float score, const stri
         return false;
     }
 
-    // grabs scenen id, lineid, and score
+    // grabs the value per line and assign to scenen id, lineid, and score from file
     file << sceneId << "\n";
     file << lineId << "\n";
     file << score << "\n";
@@ -24,8 +25,12 @@ bool SaveSystem::Save(const string& sceneId, int lineId, float score, const stri
 
 bool SaveSystem::Load(string& outSceneId, int& outLineId, float& outScore, const string& path)
 {
+    // auto read the save file
     ifstream file(path);
-    if (!file.is_open()) {
+
+    // error stufffe
+    if (!file.is_open())
+    {
         cerr << "\nNo save file found at: " << path << "\n";
         return false;
     }
@@ -36,6 +41,7 @@ bool SaveSystem::Load(string& outSceneId, int& outLineId, float& outScore, const
         return false;
     }
 
+    // loaded save file sucesfully yeeyeyye
     cout << "\nGame loaded! Have fun gamers! \nCurrent scene: " << outSceneId << "\nCurrent line: " << outLineId << "\n" << "\nRizz score: " << outScore << "\n";
     return true;
 }

@@ -6,13 +6,15 @@ using namespace std;
 
 class Rizzermometer : public UI{
 public:
+    // rectangle properties
     Rizzermometer(float max, float x, float y, float width, float height);
 
     void Update() override;
     void Draw()   override;
 
     void  AddScore(float score);
-    float GetScore() const 
+    
+    float GetScore() const
     { 
         return score; 
     }

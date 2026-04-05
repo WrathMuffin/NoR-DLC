@@ -8,13 +8,17 @@ void Renderer::Load()
     spriteSheet[0] = LoadTexture("assets/Suni_128_x_128.png");
     // spriteSheet[1] = LoadTexture("assets/Suni_128_x_128.png");
 
-    portraits["suniGremlin"] = {0, 0};
-    portraits["suniAngry"] = {1, 0};
-    portraits["suniNeutral"] = {2, 0};
-    portraits["suniDizzy"] = {3, 0};
-    portraits["suniBlank"] = {4, 0};
-    portraits["suniPout"] = {1, 0};
-    portraits["suniHappy"] = {3, 0};
+    portraits["suniGremlin"] = {0, 0};      // 0
+    portraits["suniAngry"] = {1, 0};        // 1
+    portraits["suniNeutral"] = {2, 0};      // 2
+    portraits["suniDizzy"] = {3, 0};        // 3
+    portraits["suniBlank"] = {4, 0};        // 4
+    portraits["suniPout"] = {1, 0};         // 5
+    portraits["suniHappy"] = {3, 0};        // 6
+    portraits["suniBack"] = {4, 0};         // 7
+    portraits["suniSurprise"] = {4, 0};     // 8
+    portraits["suniNervous"] = {0, 0};     // 9
+    portraits["suniBruh"] = {4, 0};     // 9
 }
 
 // to unload textures to free up memory (at the end of the program)

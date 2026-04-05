@@ -152,9 +152,9 @@ int DialogueSystem::GetCurrentLineId() const
     return lineIndex;
 }
 
-void DialogueSystem::CheckScoreBranch(float normalizedScore, const string& positiveScene, const string& negativeScene)
+void DialogueSystem::CheckScoreBranch(float normalizedScore, float conditionScore, const string& positiveScene, const string& negativeScene)
 {
-    if (normalizedScore >= 0.8f)
+    if (normalizedScore >= conditionScore)
     {
         GoToScene(positiveScene, 0);
     }

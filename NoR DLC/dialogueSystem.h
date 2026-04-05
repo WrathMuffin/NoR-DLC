@@ -20,7 +20,7 @@ struct DialogueChoice {
 };
 
 struct DialogueScene {
-    string sceneId, lineId; // gto grabs the scene name and current dialogue text
+    string sceneId;//, lineId; // gto grabs the scene name and current dialogue text
     string next; //advance if no choices
     vector<DialogueLine>   lines;
     vector<DialogueChoice> choices;
@@ -46,7 +46,7 @@ public:
     string GetCurrentSceneId() const;
     int GetCurrentLineId() const;
 
-    void CheckScoreBranch(float normalizedScore, const string& positiveScene, const string& negativeScene);
+    void CheckScoreBranch(float normalizedScore, float conditionScore, const string& positiveScene, const string& negativeScene);
 
 private:
     unordered_map<string, DialogueScene> scenes;

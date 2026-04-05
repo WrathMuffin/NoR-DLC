@@ -24,16 +24,8 @@ int main() {
     int savedDialogue = 0;
     float  savedScore = 0.0f;
 
-    if (SaveSystem::Load(savedScene, savedDialogue, savedScore)) 
-    {
-        dialogue.StartScene(savedScene, savedDialogue);
-        static_cast<Rizzermometer*>(rizzermometer)->AddScore(savedScore);
-    }
-    
-    else
-    {
-        dialogue.StartScene("intro", 0);
-    }    
+    // start scene at intro, and at dialgoue 0 (fist dialogue)
+    dialogue.StartScene("intro", 0);
 
     //actual game running
     while (!WindowShouldClose()) 
@@ -47,10 +39,22 @@ int main() {
             {
                 dialogue.Advance();
 
-                if (dialogue.GetCurrentSceneId() == "ending_check") 
+                if (dialogue.GetCurrentSceneId() == "evening_endings") 
                 {
                     float score = static_cast<Rizzermometer*>(rizzermometer)->GetNormalized();
-                    dialogue.CheckScoreBranch(score, "good_ending", "bad_ending");
+                    dialogue.CheckScoreBranch(score, 50, "evening_good", "evening_bad");
+                }
+
+                if (dialogue.GetCurrentSceneId() == "night_3_endings")
+                {
+                    float score = static_cast<Rizzermometer*>(rizzermometer)->GetNormalized();
+                    dialogue.CheckScoreBranch(score, 60, "night_good_neutral", "night_bad");
+                }
+
+                if (dialogue.GetCurrentSceneId() == "night_good_neutral")
+                {
+                    float score = static_cast<Rizzermometer*>(rizzermometer)->GetNormalized();
+                    dialogue.CheckScoreBranch(score, 70, "night_good", "night_neutral");
                 }
             }
         }
@@ -78,6 +82,21 @@ int main() {
                 dialogue.GetCurrentSceneId(), dialogue.GetCurrentLineId(),
                 static_cast<Rizzermometer*>(rizzermometer)->GetScore()
             );
+        }
+
+        if (IsKeyPressed(KEY_L))
+        {
+            if (SaveSystem::Load(savedScene, savedDialogue, savedScore))
+            {
+                dialogue.StartScene(savedScene, savedDialogue);
+                static_cast<Rizzermometer*>(rizzermometer)->AddScore(savedScore); // NOTE: change to set scroe instead not add
+            }
+
+            else
+            {
+                dialogue.StartScene("intro", 0);
+            }
+
         }
 
         rizzermometer->Update();

@@ -1,6 +1,7 @@
 #pragma once
 #include "raylib.h"
 
+// for rizzerometer
 class UI {
 public:
     virtual void Update() = 0;
