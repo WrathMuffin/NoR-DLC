@@ -6,7 +6,7 @@
       "lines": [
         {
           "character": "Narrator",
-          "text": "It has been days since your first nightshift. It was crazy but... in the end it all \nsurprisingly went well!",
+          "text": "It has been days since your first night on the job. It was crazy but... in the end it all \nsurprisingly went well!",
           "portrait": "",
           "portrait2": ""
         },
@@ -82,7 +82,9 @@
           "portrait2": ""
         }
       ],
-      "choices": [
+
+      "choices": 
+      [
         {
           "label": "Joke",
           "next_scene": "magazine_good",
@@ -103,7 +105,8 @@
     {
       "id": "magazine_good",
       "next": "magazine_aftermath",
-      "lines": [
+      "lines": 
+      [
         {
           "character": "Night Guard",
           "text": "Suni, Suni",
@@ -169,7 +172,8 @@
     {
       "id": "magazine_bad",
       "next": "magazine_aftermath",
-      "lines": [
+      "lines": 
+      [
         {
           "character": "Night Guard",
           "text": "Harha... but I'm serious! Give me the magazine dude!",
@@ -196,9 +200,10 @@
 
 
     {
-        "id": "magazine_aftermath",
+      "id": "magazine_aftermath",
       "next": "",
-      "lines": [
+      "lines": 
+      [
         {
           "character": "Suni",
           "text": "Anyway, here u go lol",
@@ -242,7 +247,9 @@
           "portrait2": ""
         }
       ],
-      "choices": [
+
+      "choices": 
+      [
         {
           "label": "Share",
           "next_scene": "content_good",
@@ -263,7 +270,8 @@
     {
       "id": "content_good",
       "next": "",
-      "lines": [
+      "lines": 
+      [
         {
           "character": "Night Guard",
           "text": "Nah nah, it's not your fault, wanna see then?",
@@ -283,7 +291,9 @@
           "portrait2": ""
         }
       ],
-      "choices": [
+
+      "choices": 
+      [
         {
           "label": "Yes",
           "next_scene": "toilet_good",
@@ -304,7 +314,8 @@
     {
       "id": "toilet_good",
       "next": "toilet",
-      "lines": [
+      "lines": 
+      [
         {
           "character": "Suni",
           "text": "Really?!? LESSGO!!!",
@@ -312,7 +323,9 @@
           "portrait2": ""
         }
       ],
-      "choices": [
+
+      "choices": 
+      [
       ]
     },
 
@@ -323,7 +336,8 @@
     {
       "id": "toilet_bad",
       "next": "",
-      "lines": [
+      "lines": 
+      [
         {
           "character": "Suni",
           "text": "Awe.. but its our favourite room remember?",
@@ -331,7 +345,9 @@
           "portrait2": ""
         }
       ],
-      "choices": [
+
+      "choices": 
+      [
         {
           "label": "On second thought...",
           "next_scene": "toilet_secondchance_good",
@@ -352,7 +368,8 @@
     {
       "id": "toilet_secondchance_good",
       "next": "toilet",
-      "lines": [
+      "lines": 
+      [
         {
           "character": "Suni",
           "text": "Hmmmm... alrite!",
@@ -369,7 +386,8 @@
     {
       "id": "toilet_secondchance_bad",
       "next": "office",
-      "lines": [
+      "lines": 
+      [
         {
           "character": "Suni",
           "text": "Hmph be it that way!",
@@ -383,7 +401,9 @@
           "portrait2": ""
         }
       ],
-      "choices": [
+
+      "choices": 
+      [
       ]
     },
 
@@ -394,7 +414,8 @@
     {
       "id": "content_bad",
       "next": "",
-      "lines": [
+      "lines": 
+      [
         {
           "character": "Narrator",
           "text": "You awkwardly buries into the magazine, not knowing how to responds to that",
@@ -435,7 +456,8 @@
     {
       "id": "toilet",
       "next": "night 2",
-      "lines": [
+      "lines": 
+      [
         {
           "character": "TOILET ROOM",
           "text": "You guys hanged out in the toilet room.",
@@ -455,7 +477,9 @@
           "portrait2": ""
         }
       ],
-      "choices": [
+
+      "choices": 
+      [
       ]
     },
 
@@ -466,7 +490,8 @@
     {
       "id": "office",
       "next": "night 2",
-      "lines": [
+      "lines": 
+      [
         {
           "character": "THE OFFICE",
           "text": "You guys hanged out in the office, \nbut she doesn't seem to enjoy what you're saying much.",
@@ -486,7 +511,9 @@
           "portrait2": ""
         }
       ],
-      "choices": [
+
+      "choices": 
+      [
       ]
     },
 
@@ -497,7 +524,8 @@
     {
       "id": "forest",
       "next": "",
-      "lines": [
+      "lines": 
+      [
         {
           "character": "Narrator",
           "text": "The forest grows dark...",
@@ -505,7 +533,9 @@
           "portrait2": ""
         }
       ],
-      "choices": [
+
+      "choices": 
+      [
         {
           "label": "Press forward",
           "next_scene": "path_brave",

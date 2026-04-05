@@ -12,7 +12,7 @@ int main() {
     //loads in the dialogue from the json file
     DialogueSystem dialogue;
     dialogue.LoadFromFile("assets/dialogue.json");
-    dialogue.StartScene("intro");
+    dialogue.StartScene("intro", 0);
 
     Renderer renderer;
     renderer.Load();
@@ -21,16 +21,18 @@ int main() {
 
     //load in a save if there is one, if not it will just start the intro
     string savedScene;
+    int savedDialogue = 0;
     float  savedScore = 0.0f;
 
-    if (SaveSystem::Load(savedScene, savedScore)) 
+    if (SaveSystem::Load(savedScene, savedDialogue, savedScore)) 
     {
-        dialogue.StartScene(savedScene);
+        dialogue.StartScene(savedScene, savedDialogue);
         static_cast<Rizzermometer*>(rizzermometer)->AddScore(savedScore);
-    } 
-    else 
+    }
+    
+    else
     {
-        dialogue.StartScene("intro");
+        dialogue.StartScene("intro", 0);
     }    
 
     //actual game running
@@ -71,8 +73,9 @@ int main() {
         //save if S is pressed
         if (IsKeyPressed(KEY_S)) 
         {
-            SaveSystem::Save(
-                dialogue.GetCurrentSceneId(),
+            SaveSystem::Save
+            (
+                dialogue.GetCurrentSceneId(), dialogue.GetCurrentLineId(),
                 static_cast<Rizzermometer*>(rizzermometer)->GetScore()
             );
         }

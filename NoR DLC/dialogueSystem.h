@@ -20,7 +20,7 @@ struct DialogueChoice {
 };
 
 struct DialogueScene {
-    string id;
+    string sceneId, lineId; // gto grabs the scene name and current dialogue text
     string next; //advance if no choices
     vector<DialogueLine>   lines;
     vector<DialogueChoice> choices;
@@ -30,7 +30,7 @@ class DialogueSystem {
 public:
     bool LoadFromFile(const string& path);
 
-    void StartScene(const string& sceneId);
+    void StartScene(const string& sceneId, int lineId);
     void Advance();          // next line or scene
     void SelectChoice(int index);
 
@@ -42,7 +42,10 @@ public:
     const vector<DialogueChoice>& Choices()   const { return currentScene->choices; }
 
     void Tick();
+
     string GetCurrentSceneId() const;
+    int GetCurrentLineId() const;
+
     void CheckScoreBranch(float normalizedScore, const string& positiveScene, const string& negativeScene);
 
 private:
@@ -53,5 +56,5 @@ private:
     bool showChoices= false;
     bool choiceJustShown = false;
 
-    void GoToScene(const string& id);
+    void GoToScene(const string& id, int lineIndex); // aded ability to jump lines for save :D
 };

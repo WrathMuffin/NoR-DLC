@@ -24,9 +24,11 @@ public:
     } 
 
 private:
+    // rizzerommoteter's scores stuff
     float score;
     float displayScore;
     float maxScore;
 
+    // rectangle borders
     float x, y, w, h;
 };
