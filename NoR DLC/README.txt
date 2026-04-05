@@ -1,0 +1,1 @@
+Using raylib-5.5_win64_mingw-w64.zip on the raylib's github
