@@ -17,7 +17,7 @@ private:
     void DrawBackground();
     void DrawPortrait(const string &portrait);
     void DrawPortrait(const string &portrait1, const string &portrait2);
-    void DrawDialogueBox(const DialogueSystem &dialogue);
+    //void DrawDialogueBox(const DialogueSystem &dialogue);
     void DrawChoices(const DialogueSystem &dialogue);
 
     Texture2D background[3];

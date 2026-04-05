@@ -4,6 +4,7 @@
 #include "ui.h"
 #include "Rizzermometer.h"
 #include "save.h"
+#include "dialogueBox.h"
 
 int main() {
     InitWindow(800, 450, "Night of Rizzing DLC");
@@ -18,6 +19,9 @@ int main() {
     renderer.Load();
 
     UI* rizzermometer = new Rizzermometer(100.0f, 20, 20, 200, 20);
+    UI* dialogueBox   = new DialogueBox(0, 320, 800, 130);
+
+    static_cast<DialogueBox*>(dialogueBox)->SetDialogue(&dialogue);
 
     //load in a save if there is one, if not it will just start the intro
     string savedScene;
@@ -99,14 +103,22 @@ int main() {
 
         }
 
+        //update
         rizzermometer->Update();
+        dialogueBox->Update(); //it's here but does nothing :(
 
-        // Draw
+        //draw 
         renderer.Draw(dialogue);
         rizzermometer->Draw();
+        dialogueBox->Draw();
     }
 
+    //free up memory by unloading textures and deleting stuff from the heap
     renderer.Unload();
+    delete rizzermometer;
+    delete dialogueBox;
+
+
     CloseWindow();
     return 0;
 }

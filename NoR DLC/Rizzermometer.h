@@ -26,7 +26,7 @@ public:
     } 
 
 private:
-    // rizzerommoteter's scores stuff
+    //rizzerommoteter's scores stuff
     float score;
     float displayScore;
     float maxScore;

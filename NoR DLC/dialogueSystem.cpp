@@ -16,7 +16,7 @@ bool DialogueSystem::LoadFromFile(const string& path)
         return false;
     }
 
-    json data = json::parse(file, nullptr, /*exceptions=*/false);
+    json data = json::parse(file, nullptr, false);
 
     if (data.is_discarded())
     {

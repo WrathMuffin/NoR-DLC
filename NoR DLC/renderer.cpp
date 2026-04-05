@@ -53,7 +53,7 @@ void Renderer::Draw(const DialogueSystem &dialogue)
             DrawPortrait(line.portrait);
         }
 
-        DrawDialogueBox(dialogue);
+        //DrawDialogueBox(dialogue);
 
         if (dialogue.IsShowingChoice())
             DrawChoices(dialogue);
@@ -136,22 +136,20 @@ void Renderer::DrawPortrait(const string &portrait1, const string &portrait2)
     }
 }
 
-// dilogue box where the dialogue shows up
+/* // dilogue box where the dialogue shows up
 void Renderer::DrawDialogueBox(const DialogueSystem &dialogue)
 {
     // select current line
     const auto &line = dialogue.CurrentLine();
 
-    // the box
+    //box background and border
     DrawRectangle(0, 320, 800, 130, Fade(BLACK, 0.8f));
     DrawRectangleLines(0, 320, 800, 130, WHITE);
 
-    // charaater name
+    //character name and dialogue
     DrawText(line.character.c_str(), 30, 330, 20, YELLOW);
-
-    // characetr dialogue
     DrawText(line.text.c_str(), 30, 360, 18, WHITE);
-}
+} */
 
 // this draws the choice box that will appere when there is a choice
 void Renderer::DrawChoices(const DialogueSystem &dialogue)
