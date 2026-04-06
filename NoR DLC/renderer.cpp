@@ -3,8 +3,6 @@
 // to load textures, our game is small enough so we chose to just load everything in
 void Renderer::Load()
 {
-    // background = LoadTexture("assets/bg_forest.png");
-
     spriteSheet[0] = LoadTexture("assets/SUNI_128_x_128.png");
     background[0] = LoadTexture("assets/Office BG.png");
     // spriteSheet[1] = LoadTexture("assets/Suni_128_x_128.png");
@@ -91,6 +89,7 @@ void Renderer::DrawPortrait(const string &portrait)
 
     float drawSize = FRAME_SIZE * PORTRAIT_SCALE;
 
+    //draw in middle
     Rectangle dest =
         {
             (800 - drawSize) / 2,

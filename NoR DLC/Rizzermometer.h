@@ -10,9 +10,9 @@ public:
     Rizzermometer(float max, float x, float y, float width, float height);
 
     void Update() override;
-    void Draw()   override;
+    void Draw() override;
 
-    void  AddScore(float score);
+    void AddScore(float score);
     
     float GetScore() const
     { 

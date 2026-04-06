@@ -43,6 +43,7 @@ int main() {
             {
                 dialogue.Advance();
 
+                //these are checks for the endings 
                 if (dialogue.GetCurrentSceneId() == "evening_endings")
                 {
                     dialogue.Advance();
@@ -91,7 +92,7 @@ int main() {
                 static_cast<Rizzermometer*>(rizzermometer)->GetScore()
             );
         }
-
+        //load if L is pressed
         if (IsKeyPressed(KEY_L))
         {
             if (SaveSystem::Load(savedScene, savedDialogue, savedScore))
