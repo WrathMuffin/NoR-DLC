@@ -42,23 +42,27 @@ int main() {
             if (IsKeyPressed(KEY_SPACE))
             {
                 dialogue.Advance();
-                
-                if (dialogue.GetCurrentSceneId() == "night_good_neutral")
+
+                if (dialogue.GetCurrentSceneId() == "evening_endings")
                 {
-                    float score = static_cast<Rizzermometer*>(rizzermometer)->GetNormalized();
-                    dialogue.CheckScoreBranch(score, 0.7f, "night_good", "night_neutral");
-                }
-                                
-                else if (dialogue.GetCurrentSceneId() == "night_3")
-                {
-                    float score = static_cast<Rizzermometer*>(rizzermometer)->GetNormalized();
-                    dialogue.CheckScoreBranch(score, 0.6f, "night_good_neutral", "night_bad");
-                }
-                                
-                else if (dialogue.GetCurrentSceneId() == "evening_endings") 
-                {
+                    dialogue.Advance();
                     float score = static_cast<Rizzermometer*>(rizzermometer)->GetNormalized();
                     dialogue.CheckScoreBranch(score, 0.5f, "evening_good", "evening_bad");
+                    
+                }
+                
+                else if (dialogue.GetCurrentSceneId() == "night_3_endings")
+                {
+                    dialogue.Advance();
+                    float score = static_cast<Rizzermometer*>(rizzermometer)->GetNormalized();
+                    dialogue.CheckScoreBranch(score, 0.6f, "night_good_neutral_endings", "night_bad");
+                }
+                
+                else if (dialogue.GetCurrentSceneId() == "night_good_neutral_endings")
+                {
+                    dialogue.Advance();
+                    float score = static_cast<Rizzermometer*>(rizzermometer)->GetNormalized();
+                    dialogue.CheckScoreBranch(score, 0.7f, "night_good", "night_neutral");
                 }
             }
         }
@@ -108,7 +112,7 @@ int main() {
         rizzermometer->Update();
         dialogueBox->Update(); //it's here but does nothing :(
 
-        //draw 
+        //draw
         renderer.Draw(dialogue);
         rizzermometer->Draw();
         dialogueBox->Draw();

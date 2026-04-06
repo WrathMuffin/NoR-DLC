@@ -660,7 +660,7 @@
         },
         {
           "character": "Night Guard",
-          "text": "Hey, I worried about you too yk? If it's something bad, I can help!\nI'm security after all, gotta make sure evrything is safe and secure here.",
+          "text": "Hey, I'm worried about you too yk? If it's something bad, I can help!\nI'm security after all, gotta make sure evrything is safe and secure here.",
           "portrait": "suniNervous",
           "portrait2": ""
         },
@@ -809,7 +809,7 @@
         },
         {
           "character": "Night Guard",
-          "text": "Um...ok, Suni, like I promise I won't react, is it ok you cna show me what it is?",
+          "text": "Um...ok, Suni, like I promise I won't react, is it ok you can show me what it is?",
           "portrait": "suniNeutral",
           "portrait2": ""
         },
@@ -866,7 +866,7 @@
         },
         {
           "character": "",
-          "text": "You may youse the facility's EZ-CART to bring the package safely to storage 6.",
+          "text": "You may use the facility's EZ-CART to bring the package safely to storage 6.",
           "portrait": "",
           "portrait2": ""
         },
@@ -878,7 +878,7 @@
         },
         {
           "character": "",
-          "text": "Every EZ-CART are equipped wih a complete manual in the glovebox\nthat may helped you if needed.",
+          "text": "Every EZ-CART is equipped wih a complete manual in the glovebox\nthat may help you if needed.",
           "portrait": "",
           "portrait2": ""
         },
@@ -951,7 +951,7 @@
         },
         {
           "character": "Narrator",
-          "text": "Suni pokes at the letter, to the new androi's name.",
+          "text": "Suni pokes at the letter, to the new android's name.",
           "portrait": "suniAngry",
           "portrait2": ""
         },
@@ -1132,7 +1132,7 @@
       [
         {
           "character": "Night Guard",
-          "text": "Uh..ok, I don't know much if I can really do much, but... I'll try?",
+          "text": "Uh..ok, I don't know if I can really do much, but... I'll try?",
           "portrait": "suniAngry",
           "portrait2": ""
         },
@@ -1305,37 +1305,37 @@
         {
           "character": "Night Guard",
           "text": "WOAH! Suni! Ya sneaky dog! or fox! lol",
-          "portrait": "",
+          "portrait": "suniGremlin",
           "portrait2": ""
         },
         {
           "character": "Suni",
           "text": "Hehe...So! You remember the plan I mentioned?",
-          "portrait": "",
+          "portrait": "suniGremlin",
           "portrait2": ""
         },
         {
           "character": "Night Guard",
           "text": "Uh...UHhhhhhhhhh (you forgor again bruh?)",
-          "portrait": "",
+          "portrait": "suniGremlin",
           "portrait2": ""
         },
         {
           "character": "Night Guard",
           "text": "Uh... yeah, you had an idea?",
-          "portrait": "",
+          "portrait": "suniGremlin",
           "portrait2": ""
         },
         {
           "character": "Suni",
           "text": "YEAH! SABOTAGE THE NEW ANDROID!!!",
-          "portrait": "",
+          "portrait": "suniGremlin",
           "portrait2": ""
         },
         {
           "character": "Night Guard",
           "text": "Oh...that...\nUHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH",
-          "portrait": "",
+          "portrait": "suniGremlin",
           "portrait2": ""
         }
       ],
@@ -1359,13 +1359,13 @@
 
     {
       "id": "idea_good",
-      "next": "night_3",
+      "next": "",
       "lines": 
       [
         {
           "character": "Night Guard",
           "text": "YEAHH LESSGOO",
-          "portrait": "",
+          "portrait": "suniGremlin",
           "portrait2": ""
         },
         {
@@ -1440,7 +1440,7 @@
         {
           "character": "Night Guard",
           "text": "Ok...but, I don't think that's a good idea...",
-          "portrait": "suniHappy",
+          "portrait": "suniGremlin",
           "portrait2": ""
         },
         {
@@ -1548,12 +1548,25 @@
     
     {
       "id": "night_3",
-      "next": "",
-      "lines": [
+      "next": "night_3_endings",
+      "lines": 
+      [
+        {
+          "character": "",
+          "text": "NIGHT 2: END",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "",
+          "text": "NIGHT 3: CARD PUNCHED",
+          "portrait": "",
+          "portrait2": ""
+        },
         {
           "character": "Narrator",
-          "text": "You and Suni prepared a harmless prank, a classic: bucket above the door prank.",
-          "portrait": "",
+          "text": "You and Suni prepare a harmless prank, a classic: bucket above the door prank.",
+          "portrait": "suniGremlin",
           "portrait2": ""
         },
         {
@@ -1577,7 +1590,7 @@
         {
           "character": "Suni",
           "text": "Wow nerd much breh? Ok, all I know is that, when it gets soaked,\nwe'll all be standing there aura farming while that thing gets rekked eheheheh",
-          "portrait": "suniHappy",
+          "portrait": "suniPout",
           "portrait2": ""
         },
         {
@@ -1600,6 +1613,19 @@
         }
       ],
     
+      "choices": 
+      []
+    },
+
+
+
+
+
+    {
+      "id": "night_3_endings",
+      "next": "",
+      "lines": 
+      [],
       "choices": 
       []
     },
@@ -1639,12 +1665,12 @@
         },
         {
           "character": "???",
-          "text": "Hello! My name is SUNI-02, I am the android sent by Slife of Life.",
+          "text": "Hello! My name is SUNE-02, I am the android sent by Slife of Life.",
           "portrait": "",
           "portrait2": ""
         },
         {
-          "character": "SUNI-02",
+          "character": "SUNE-02",
           "text": "My sole purpose here, is to hel-",
           "portrait": "suniGremlin",
           "portrait2": ""
@@ -1663,7 +1689,7 @@
         },
         {
           "character": "Narrator",
-          "text": "It hits SUNI-02 right on the head with the bottom of the bucket,\nbefore proceeding to spill all over, further sizzling the new android to a crisp.",
+          "text": "It hits SUNE-02 right on the head with the bottom of the bucket,\nbefore proceeding to spill all over, further sizzling the new android to a crisp.",
           "portrait": "suniSurprise",
           "portrait2": ""
         },
@@ -1720,6 +1746,17 @@
         }
       ]
     },
+
+
+
+
+    
+    {
+      "id": "night_3_endings",
+      "next": "",
+      "lines": [],
+      "choices": []
+    },
     
 
 
@@ -1727,7 +1764,7 @@
 
     {
       "id": "night_good_neutral",
-      "next": "",
+      "next": "night_good_neutral_endings",
       "lines": 
       [
         {
@@ -1782,6 +1819,17 @@
 
       "choices": 
       []
+    },
+
+
+
+
+
+    {
+      "id": "night_good_neutral_endings",
+      "next": "",
+      "lines": [],
+      "choices": []
     },
 
 
@@ -1924,7 +1972,7 @@
         },
         {
           "character": "Narrator",
-          "text": "You, not so much, as you avoided the bucket initially.\nBut with a vengeance, the bucket managed to slashed you completely!",
+          "text": "You, not so much, as you avoided the bucket initially.\nBut with a vengeance, the bucket managed to splashed you completely!",
           "portrait": "suniSurprise",
           "portrait2": ""
         },
@@ -1972,12 +2020,12 @@
         },
         {
           "character": "???",
-          "text": " Ahem-\nHello! My name is SUNI-02, I am the android sent by Slife of Life.",
+          "text": " Ahem-\nHello! My name is SUNE-02, I am the android sent by Slife of Life.",
           "portrait": "suniPout",
           "portrait2": "sukiNeutral"
         },
         {
-          "character": "SUNI-02",
+          "character": "SUNE-02",
           "text": "My sole purpose here, is to help as the facility's janitor.",
           "portrait": "suniPout",
           "portrait2": "sukiNeutral"
@@ -1995,14 +2043,14 @@
           "portrait2": "sukiSurprise"
         },
         {
-          "character": "SUNI-02",
-          "text": "Suni? Well that's a nice name, I hope we can get along as fellow rizzers!",
+          "character": "SUNE-02",
+          "text": "Suni? Well that's a nice name, I hope we can get along as fellow rizzlers!",
           "portrait": "suniNervous",
           "portrait2": "sukiNeutral"
         },
         {
           "character": "Suni",
-          "text": "HUH!?!? Oh ME? Uh... Y-you too ig *blushes* (OwO aaauuwooo so embarasing!\nI really though I was going to be replaced!)",
+          "text": "HUH!?!? Oh ME? Uh... Y-you too ig *blushes* (OwO aaauuwooo so embarrassing!\nI really thought I was going to be replaced!)",
           "portrait": "suniBlush",
           "portrait2": "sukiHappy"
         },
@@ -2014,7 +2062,7 @@
         },
         {
           "character": "Night Guard",
-          "text": "Hahahaha Suni I can you blushing hehehe~",
+          "text": "Hahahaha Suni I can see you blushing hehehe~",
           "portrait": "suniBlush",
           "portrait2": "sukiHappy"
         },
@@ -2025,20 +2073,20 @@
           "portrait2": "sukiHappy"
         },
         {
-          "character": "SUNI-02",
+          "character": "SUNE-02",
           "text": "Hihihi",
           "portrait": "suniPout",
           "portrait2": "sukiHappy"
         },
         {
           "character": "Narrator",
-          "text": "SUNI-02 giggled softly, sounding surpisingly like a real fox.\nWHAT DOES THE FOX SAY?!?",
+          "text": "SUNE-02 giggled softly, sounding surpisingly like a real fox.\nWHAT DOES THE FOX SAY?!?",
           "portrait": "suniNeutral",
           "portrait2": "sukiHappy"
         },
         {
           "character": "Narrator",
-          "text": "The room fills with sounds of fox giggles.\nIt really works out in the end huh? Phewie",
+          "text": "The room fills with sounds of fox giggles.\nIt really worked out in the end huh? Phewie",
           "portrait": "suniNeutral",
           "portrait2": "sukiHappy"
         }

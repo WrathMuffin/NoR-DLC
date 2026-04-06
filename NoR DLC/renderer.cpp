@@ -6,6 +6,7 @@ void Renderer::Load()
     // background = LoadTexture("assets/bg_forest.png");
 
     spriteSheet[0] = LoadTexture("assets/SUNI_128_x_128.png");
+    background[0] = LoadTexture("assets/Office BG.png");
     // spriteSheet[1] = LoadTexture("assets/Suni_128_x_128.png");
 
     portraits["suniGremlin"] = {0, 0};      // 0
