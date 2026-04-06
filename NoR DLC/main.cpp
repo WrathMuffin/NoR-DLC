@@ -49,7 +49,7 @@ int main() {
                     dialogue.CheckScoreBranch(score, 50, "evening_good", "evening_bad");
                 }
 
-                if (dialogue.GetCurrentSceneId() == "night_3_endings")
+                if (dialogue.GetCurrentSceneId() == "night_3")
                 {
                     float score = static_cast<Rizzermometer*>(rizzermometer)->GetNormalized();
                     dialogue.CheckScoreBranch(score, 60, "night_good_neutral", "night_bad");
@@ -93,7 +93,8 @@ int main() {
             if (SaveSystem::Load(savedScene, savedDialogue, savedScore))
             {
                 dialogue.StartScene(savedScene, savedDialogue);
-                static_cast<Rizzermometer*>(rizzermometer)->AddScore(savedScore); // NOTE: change to set scroe instead not add
+                static_cast<Rizzermometer*>(rizzermometer)->AddScore(-100); // reset to 0
+                static_cast<Rizzermometer*>(rizzermometer)->AddScore(savedScore); // then add saved scroe
             }
 
             else

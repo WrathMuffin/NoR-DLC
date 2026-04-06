@@ -419,7 +419,7 @@
 
     {
       "id": "content_bad",
-      "next": "night 2",
+      "next": "night_2",
       "lines": 
       [
         {
@@ -482,7 +482,7 @@
       [
         {
           "label": "Shift's over! Time to punch out!",
-          "next_scene": "night 2",
+          "next_scene": "night_2",
           "score_change": 10
         }
       ]
@@ -507,8 +507,7 @@
           "character": "THE OFFICE",
           "text": "...Does she not like the magazine's contents? \nMaybe you could find a more interesting one...?",
           "portrait": "suniBruh",
-          "portrait2": "",
-          "score_change": 5
+          "portrait2": ""
         }
       ],
 
@@ -516,7 +515,7 @@
       [
         {
           "label": "Shift's over! Time to punch out!",
-          "next_scene": "night 2",
+          "next_scene": "night_2",
           "score_change": 5
         }
       ]
@@ -527,7 +526,7 @@
 
 
     {
-      "id": "night 2",
+      "id": "night_2",
       "next": "",
       "lines": 
       [
@@ -582,7 +581,7 @@
         {
           "character": "Narrator",
           "text": "You saw her hastily hiding something behind her back. You wonder why...",
-          "portrait": "",
+          "portrait": "suniNervous",
           "portrait2": ""
         }
       ],
@@ -844,7 +843,7 @@
         {
           "character": "Narrator",
           "text": "What? It's a letter...addressed to YOU!",
-          "portrait": "",
+          "portrait": "suniNervous",
           "portrait2": ""
         },
         {
@@ -964,20 +963,20 @@
         },
         {
           "character": "Night Guard",
-          "text": "Wha-WHAT! No way! Why do you think that?\nAll of my behavioral report always says you have MASSIVE aura, a-and is a SIGMA android!!!",
-          "portrait": "",
+          "text": "Wha-WHAT! No way! Why do you think that?\nAll of my behavioral report always says you have MASSIVE aura,\na-and is a SIGMA android!!!",
+          "portrait": "suniAngry",
           "portrait2": ""
         },
         {
           "character": "Suni",
           "text": "You gotta be kidding me! IT'S SO OBVIOUS! LOOK! The code name don't lie!\nWhat's SUNE-02? You see it? 02!!! DO YOU SEE THE NUMBAH 2?!? IM SUNE-01!!!",
-          "portrait": "",
+          "portrait": "suniAngry",
           "portrait2": ""
         },
         {
           "character": "Night Guard",
           "text": "UHHHH...UHHH!!!",
-          "portrait": "",
+          "portrait": "suniAngry",
           "portrait2": ""
         }
       ],
@@ -1057,7 +1056,7 @@
         {
           "character": "Suni",
           "text": "THAT WE CAN SABOTAGE THE OPERATION!!!",
-          "portrait": "suniGemlin",
+          "portrait": "suniGremlin",
           "portrait2": ""
         },
         {
@@ -1172,51 +1171,6 @@
 
 
     {
-      "id": "try_good",
-      "next": "evening",
-      "lines": 
-      [
-        {
-          "character": "Night Guard",
-          "text": "Uh..ok, I don't know much if I can really do much, but... I'll try?",
-          "portrait": "suniAngry",
-          "portrait2": ""
-        },
-        {
-          "character": "Suni",
-          "text": "Really...?",
-          "portrait": "suniPout",
-          "portrait2": ""
-        },
-        {
-          "character": "Suni",
-          "text": "Well...",
-          "portrait": "suniPout",
-          "portrait2": ""
-        },
-        {
-          "character": "Suni",
-          "text": "I think... I have an idea...",
-          "portrait": "suniPout",
-          "portrait2": ""
-        },
-        {
-          "character": "Narrator",
-          "text": "Suni left without another words. You are so cooked...",
-          "portrait": "",
-          "portrait2": ""
-        }
-      ],
-
-      "choices": 
-      []
-    },
-
-
-
-
-
-    {
       "id": "package_bad",
       "next": "evening",
       "lines": 
@@ -1269,9 +1223,15 @@
 
     {
       "id": "evening",
-      "next": "evening_ending",
+      "next": "",
       "lines": 
       [
+        {
+          "character": "",
+          "text": "EVENING: 9PM SHARP",
+          "portrait": "",
+          "portrait2": ""
+        },
         {
           "character": "Narrator",
           "text": "You went to platform 6-7 to inspect the package.",
@@ -1289,9 +1249,108 @@
       "choices": 
       [
         {
-          "label": "Activate EZ-CART's automated driver.",
-          "next_scene": "",
-          "score_change": -1
+          "label": "Activate EZ-CART",
+          "next_scene": "evening_endings",
+          "score_change": -0.01
+        }
+      ]
+    },
+
+
+
+
+
+    {
+      "id": "evening_endings",
+      "next": "",
+      "lines": [
+        {
+          "character": "Narrator",
+          "text": "Your Rizzerometer beeps, as if this is a very important moment...?",
+          "portrait": "",
+          "portrait2": ""
+        }
+      ],
+
+      "choices": 
+      []
+    },
+
+
+
+
+
+    {
+      "id": "evening_good",
+      "next": "",
+      "lines": [
+        {
+          "character": "Narrator",
+          "text": "The EZ-CART picked up the package easily, and carefully drove to storage 6.",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "'Tsk, nice!' You say to no one particular.",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "Hewo :P",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "WOAH! Suni! Ya sneaky dog! or fox! lol",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "Hehe...So! You remember the plan I mentioned?",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "Uh...UHhhhhhhhhh (you forgor again bruh?)",
+          "portrait": "suniBruh",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "Uh... yeah, you had an idea?",
+          "portrait": "suniBruh",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "YEAH! SABOTAGE THE NEW ANDROID!!!",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "Oh...that...\nUHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        }
+      ],
+
+      "choices": 
+      [
+        {
+          "label": "Bad idea bruh...",
+          "next_scene": "idea_bad",
+          "score_change": 0
+        },
+        {
+          "label": "HEELLL YEAHHH!!!",
+          "next_scene": "idea_good",
+          "score_change": 10
         }
       ]
     },
@@ -1359,9 +1418,7 @@
           "portrait2": ""
         }
       ],
-
-      "choices": 
-      [
+      "choices": [
         {
           "label": "Bad idea bruh...",
           "next_scene": "idea_bad",
@@ -1371,6 +1428,120 @@
           "label": "HEELLL YEAHHH!!!",
           "next_scene": "idea_good",
           "score_change": 10
+        }
+      ]
+    },
+
+
+
+
+
+    {
+      "id": "idea_good",
+      "next": "night_3",
+      "lines": 
+      [
+        {
+          "character": "Night Guard",
+          "text": "YEAHH LESSGOO",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "YEAHHHHHH! DONT WORRY!!! It's a harmless prank, I'm sure of it!",
+          "portrait": "suniHappy",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "Something to show them that it's 'defective' and you can write a report about it!",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "And that'll force a 'return to sender' kinda thing! Lelelele",
+          "portrait": "suniHappy",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "...Also...",
+          "portrait": "suniPout",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "If I were to risk your job... who am I gonna hangout with?!?",
+          "portrait": "suniPout",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "Certainly not some ol sussy baka who don't understand 67???",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "Heh, yeah! Those who knows ehehehe~",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "HAHAH yeh THOS WHO NKNOWS 676767676767 eleleleleleleleelel",
+          "portrait": "suniHappy",
+          "portrait2": ""
+        }
+      ],
+
+      "choices": 
+      [
+        {
+          "label": "Shift's over! Time to punch out!",
+          "next_scene": "night_3",
+          "score_change": 0
+        }
+      ]
+    },
+
+
+
+
+
+    {
+      "id": "idea_bad",
+      "next": "night_3",
+      "lines": 
+      [
+        {
+          "character": "Night Guard",
+          "text": "Ok...but, I don't think that's a good idea...",
+          "portrait": "suniHappy",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "Ugh, realy? Im in a good mood you know! It's not even dangerous bruh!\nI'm not that kinda perso-android!",
+          "portrait": "suniPout",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "If you say so...",
+          "portrait": "suniPout",
+          "portrait2": ""
+        }
+      ],
+
+      "choices": 
+      [
+        {
+          "label": "Shift's over! Time to punch out!",
+          "next_scene": "night_3",
+          "score_change": 0
         }
       ]
     },
@@ -1404,7 +1575,7 @@
         {
           "character": "Suni",
           "text": "EHAHEHEHEHHAHHAHAHAHAH EZ-CART IS INDEED EZ...",
-          "portrait": "suniGemlin",
+          "portrait": "suniGremlin",
           "portrait2": ""
         },
         {
@@ -1439,7 +1610,13 @@
         }
       ],
       "choices": 
-      []
+      [
+        {
+          "label": "RESTART GAME",
+          "next_scene": "intro",
+          "score_change": -100
+        }
+      ]
     },
 
 
