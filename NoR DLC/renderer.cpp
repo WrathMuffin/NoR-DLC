@@ -65,7 +65,7 @@ void Renderer::Draw(const DialogueSystem &dialogue)
             DrawChoices(dialogue);
     }
 
-    EndDrawing();
+    //EndDrawing();
 }
 
 void Renderer::DrawBackground()
@@ -174,7 +174,7 @@ void Renderer::DrawChoices(const DialogueSystem &dialogue)
         bool hover = CheckCollisionPointRec(GetMousePosition(), btn);
 
         // change button color between sleeected or not selected
-        DrawRectangleRec(btn, hover ? DARKGRAY : GRAY);
+        DrawRectangleRec(btn, hover ? DARKPURPLE : PINK);
 
         // choices label
         DrawText(choices[i].label.c_str(), (int)btn.x + 10, (int)btn.y + 10, 18, WHITE);

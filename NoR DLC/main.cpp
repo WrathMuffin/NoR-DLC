@@ -111,11 +111,13 @@ int main() {
         //update
         rizzermometer->Update();
         dialogueBox->Update(); //it's here but does nothing :(
-
+        
         //draw
         renderer.Draw(dialogue);
         rizzermometer->Draw();
         dialogueBox->Draw();
+
+        EndDrawing();
     }
 
     //free up memory by unloading textures and deleting stuff from the heap

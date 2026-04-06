@@ -33,7 +33,7 @@ void Rizzermometer::Draw()
     float fill = (displayScore / maxScore) * w;
 
     //Background
-    DrawRectangle((int)x, (int)y, (int)w, (int)h, DARKGRAY);
+    DrawRectangle((int)x, (int)y, (int)w, (int)h, DARKPURPLE);
 
     //Filled portion — color shifts green to red based on score
     Color barColor = ColorLerp(WHITE, PINK, displayScore / maxScore);
