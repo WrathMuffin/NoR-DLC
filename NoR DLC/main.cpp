@@ -10,6 +10,10 @@ int main() {
     InitWindow(800, 450, "Night of Rizzing DLC");
     SetTargetFPS(12); //its a visual novel so 12 fps should be enough
 
+    // game icon works!!! :D
+    Image icon = LoadImage("assets/icon.png");
+    SetWindowIcon(icon);
+
     //loads in the dialogue from the json file
     DialogueSystem dialogue;
     dialogue.LoadFromFile("assets/dialogue.json");
@@ -52,14 +56,14 @@ int main() {
                     
                 }
                 
-                else if (dialogue.GetCurrentSceneId() == "night_3_endings")
+                if (dialogue.GetCurrentSceneId() == "night_3_endings")
                 {
                     dialogue.Advance();
                     float score = static_cast<Rizzermometer*>(rizzermometer)->GetNormalized();
-                    dialogue.CheckScoreBranch(score, 0.6f, "night_good_neutral_endings", "night_bad");
+                    dialogue.CheckScoreBranch(score, 0.6f, "night_good_neutral", "night_bad");
                 }
                 
-                else if (dialogue.GetCurrentSceneId() == "night_good_neutral_endings")
+                if (dialogue.GetCurrentSceneId() == "night_good_neutral_endings")
                 {
                     dialogue.Advance();
                     float score = static_cast<Rizzermometer*>(rizzermometer)->GetNormalized();
@@ -122,6 +126,7 @@ int main() {
     }
 
     //free up memory by unloading textures and deleting stuff from the heap
+    UnloadImage(icon);
     renderer.Unload();
     delete rizzermometer;
     delete dialogueBox;

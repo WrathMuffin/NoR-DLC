@@ -424,7 +424,7 @@
       [
         {
           "character": "Narrator",
-          "text": "You became way too locked into your EPIK magazine. Leaving Suni to stand there awkwardly.",
+          "text": "You became way too locked into your EPIK magazine.\nLeaving Suni to stand there awkwardly.",
           "portrait": "suniPout",
           "portrait2": ""
         },
@@ -816,7 +816,7 @@
         {
           "character": "Suni",
           "text": "Oh!...Uh, alrite! Because you promised!",
-          "portrait": "suniSurprise",
+          "portrait": "suniNervous",
           "portrait2": ""
         },
         {
@@ -1082,6 +1082,75 @@
 
 
     {
+      "id": "package_bad",
+      "next": "evening",
+      "lines": 
+      [
+        {
+          "character": "Night Guard",
+          "text": "WOAH! A new android?!? Suni, did you know about this?!?\nW-well not now lol, but like, before today??",
+          "portrait": "suniPout",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "Uh, no.",
+          "portrait": "suniBlank",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "Oh well! Can't wait to see the new android though!\nMaybe she'll be like a sister! For you, Suni! :D",
+          "portrait": "suniBlank",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "Meet you up at platform 6-7 then?",
+          "portrait": "suniBlank",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "No, I have BUSI to attend to, so no.",
+          "portrait": "suniPout",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "Wait, when are you busi with anything lol? And busy with what?",
+          "portrait": "suniPout",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "None of YOUR BUSIness! JUST DO UR J*B LIKE A LIL BOYE AND LEAVE ME BE!!!",
+          "portrait": "suniAngry",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "Wah-Wait! Su-",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "She left before you could say anything...",
+          "portrait": "",
+          "portrait2": ""
+        }
+      ],
+      
+      "choices": 
+      []
+    },
+
+
+
+
+
+    {
       "id": "replace_bad",
       "next": "",
       "lines": 
@@ -1171,7 +1240,7 @@
 
 
     {
-      "id": "package_bad",
+      "id": "try_bad",
       "next": "evening",
       "lines": 
       [
@@ -1263,7 +1332,8 @@
     {
       "id": "evening_endings",
       "next": "",
-      "lines": [
+      "lines":
+      [
         {
           "character": "Narrator",
           "text": "Your Rizzerometer beeps, as if this is a very important moment...?",
@@ -1283,7 +1353,8 @@
     {
       "id": "evening_good",
       "next": "",
-      "lines": [
+      "lines": 
+      [
         {
           "character": "Narrator",
           "text": "The EZ-CART picked up the package easily, and carefully drove to storage 6.",
@@ -1583,7 +1654,7 @@
         },
         {
           "character": "Night Guard",
-          "text": "My hypothesis is that thay will wake up in... 67 seconds. *shniff*",
+          "text": "My hypothesis is that they will wake up in... 67 seconds. *shniff*",
           "portrait": "suniBruh",
           "portrait2": ""
         },
@@ -1626,6 +1697,7 @@
       "next": "",
       "lines": 
       [],
+
       "choices": 
       []
     },
@@ -1642,7 +1714,13 @@
         {
           "character": "Narrator",
           "text": "The Rizzeromometer beeps, prompting you to look at it.",
-          "portrait": "suniAngry",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "You have a foreboding feeling...\nBut your lack of rizz made you hesitate!",
+          "portrait": "suniGremlin",
           "portrait2": ""
         },
         {
@@ -1659,33 +1737,33 @@
         },
         {
           "character": "Narrator",
-          "text": "You and Suni both, waited in anticipation...",
+          "text": "You and Suni both waited in anticipation...",
           "portrait": "",
           "portrait2": ""
         },
         {
           "character": "???",
           "text": "Hello! My name is SUNE-02, I am the android sent by Slife of Life.",
-          "portrait": "",
+          "portrait": "sukiNeutral",
           "portrait2": ""
         },
         {
           "character": "SUNE-02",
           "text": "My sole purpose here, is to hel-",
-          "portrait": "suniGremlin",
+          "portrait": "sukiNeutral",
           "portrait2": ""
         },
         {
           "character": "Suni",
           "text": "TAKE THIS YOU SUSSY SOYJACK BAKA!!!",
-          "portrait": "suniHappy",
-          "portrait2": ""
+          "portrait": "suniGremlin",
+          "portrait2": "sukiSurprise"
         },
         {
           "character": "Narrator",
           "text": "Due to how the bucket was positioned, it fell with a hard clang,\ninstead of pouring the water.",
           "portrait": "suniSurprise",
-          "portrait2": ""
+          "portrait2": "sukiSurprise"
         },
         {
           "character": "Narrator",
@@ -1745,17 +1823,6 @@
           "score_change": -100
         }
       ]
-    },
-
-
-
-
-    
-    {
-      "id": "night_3_endings",
-      "next": "",
-      "lines": [],
-      "choices": []
     },
     
 
@@ -1843,7 +1910,7 @@
       [
         {
           "character": "Narrator",
-          "text": "The Rizzeromometer beeps once again...\nWhy do you have a foreboding feeling abotu this?",
+          "text": "The Rizzeromometer beeps once again...\nWhy do you have a foreboding feeling about this?",
           "portrait": "suniGremlin",
           "portrait2": ""
         },
@@ -1915,7 +1982,7 @@
         },
         {
           "character": "Narrator",
-          "text": "Though you do get a slap on the wirst for following with Suni's prank idea.\nYou do hope Suni and the new android get along while you're recovering tho...",
+          "text": "Though you do get a slap on the wrist for following with Suni's prank idea.\nYou do hope Suni and the new android get along while you're recovering tho...",
           "portrait": "",
           "portrait2": ""
         },

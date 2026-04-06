@@ -25,7 +25,7 @@ bool SaveSystem::Save(const string& sceneId, int lineId, float score, const stri
 
 bool SaveSystem::Load(string& outSceneId, int& outLineId, float& outScore, const string& path)
 {
-    // auto read the save file
+    // read save file
     ifstream file(path);
 
     // error stufffe
