@@ -30,8 +30,8 @@ void Renderer::Load()
 // to unload textures to free up memory (at the end of the program)
 void Renderer::Unload()
 {
-    UnloadTexture(background[3]);
-    UnloadTexture(spriteSheet[2]);
+    UnloadTexture(background[0]);
+    UnloadTexture(spriteSheet[0]);
 
     /* for (auto& [key, tex] : portraits)
     {
