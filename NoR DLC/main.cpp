@@ -42,23 +42,23 @@ int main() {
             if (IsKeyPressed(KEY_SPACE))
             {
                 dialogue.Advance();
-
-                if (dialogue.GetCurrentSceneId() == "evening_endings") 
-                {
-                    float score = static_cast<Rizzermometer*>(rizzermometer)->GetNormalized();
-                    dialogue.CheckScoreBranch(score, 50, "evening_good", "evening_bad");
-                }
-
-                if (dialogue.GetCurrentSceneId() == "night_3")
-                {
-                    float score = static_cast<Rizzermometer*>(rizzermometer)->GetNormalized();
-                    dialogue.CheckScoreBranch(score, 60, "night_good_neutral", "night_bad");
-                }
-
+                
                 if (dialogue.GetCurrentSceneId() == "night_good_neutral")
                 {
                     float score = static_cast<Rizzermometer*>(rizzermometer)->GetNormalized();
-                    dialogue.CheckScoreBranch(score, 70, "night_good", "night_neutral");
+                    dialogue.CheckScoreBranch(score, 0.7f, "night_good", "night_neutral");
+                }
+                                
+                else if (dialogue.GetCurrentSceneId() == "night_3")
+                {
+                    float score = static_cast<Rizzermometer*>(rizzermometer)->GetNormalized();
+                    dialogue.CheckScoreBranch(score, 0.6f, "night_good_neutral", "night_bad");
+                }
+                                
+                else if (dialogue.GetCurrentSceneId() == "evening_endings") 
+                {
+                    float score = static_cast<Rizzermometer*>(rizzermometer)->GetNormalized();
+                    dialogue.CheckScoreBranch(score, 0.5f, "evening_good", "evening_bad");
                 }
             }
         }

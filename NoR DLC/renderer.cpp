@@ -20,10 +20,10 @@ void Renderer::Load()
     portraits["suniNervous"] = {9, 0};      // 9
     portraits["suniBruh"] = { 10, 0 };      // 10
     
-    portraits["sukiNeutral"] = { 10, 0 };   // 11
-    portraits["sukiHappy"] = { 10, 0 };     // 12
-    portraits["sukiSurprise"] = { 10, 0 };  // 13
-    portraits["sukiNervous"] = { 10, 0 };   // 14
+    portraits["sukiNeutral"] = { 11, 0 };   // 11
+    portraits["sukiHappy"] = { 12, 0 };     // 12
+    portraits["sukiSurprise"] = { 13, 0 };  // 13
+    portraits["sukiNervous"] = { 14, 0 };   // 14
 }
 
 // to unload textures to free up memory (at the end of the program)
