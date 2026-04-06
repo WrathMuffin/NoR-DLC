@@ -19,14 +19,14 @@ int main() {
     renderer.Load();
 
     UI* rizzermometer = new Rizzermometer(100.0f, 20, 20, 200, 20);
-    UI* dialogueBox   = new DialogueBox(0, 320, 800, 130);
+    UI* dialogueBox = new DialogueBox(0, 320, 800, 130);
 
     static_cast<DialogueBox*>(dialogueBox)->SetDialogue(&dialogue);
 
     //load in a save if there is one, if not it will just start the intro
     string savedScene;
     int savedDialogue = 0;
-    float  savedScore = 0.0f;
+    float savedScore = 0.0f;
 
     // start scene at intro, and at dialgoue 0 (fist dialogue)
     dialogue.StartScene("intro", 0);
