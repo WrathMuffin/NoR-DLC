@@ -1545,15 +1545,16 @@
         }
       ]
     },
+    
+    
 
 
-
-
-
+    
     {
       "id": "evening_bad",
       "next": "",
-      "lines": [
+      "lines": 
+      [
         {
           "character": "Narrator",
           "text": "You suddenly hear a loud SCREEECH!!!",
@@ -1609,6 +1610,354 @@
           "portrait2": ""
         }
       ],
+
+      "choices": 
+      [
+        {
+          "label": "RESTART GAME",
+          "next_scene": "intro",
+          "score_change": -100
+        }
+      ]
+    },
+    
+    
+    
+    
+    
+    {
+      "id": "night_3",
+      "next": "",
+      "lines": [
+        {
+          "character": "Narrator",
+          "text": "You and Suni prepared a harmless prank, a classic: bucket above the door prank.",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "HEHEHEHHEH, annnnddd done! I think that android should activate like...idk, a moment?",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "Ermmm...ACKSHUALLY, according to my memory *SHNIFF + adjusts glasses* you took:\napproximately 5 minutes since placed in storage. So!",
+          "portrait": "suniBruh",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "My hypothesis is that thay will wake up in... 67 seconds. *shniff*",
+          "portrait": "suniBruh",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "Wow nerd much breh? Ok, all I know is that, when it gets soaked,\nwe'll all be standing there aura farming while that thing gets rekked eheheheh",
+          "portrait": "suniHappy",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "TAKE THAT CLANKER AHAHAHAHAHAHHAHEeheheheheheeeeee",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "Hehe, uh, you're...really excited to see they go huh? No chance at all...?",
+          "portrait": "suniBruh",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "YEAH!!! No ones REPLACING ME!!!",
+          "portrait": "suniAngry",
+          "portrait2": ""
+        }
+      ],
+    
+      "choices": 
+      []
+    },
+
+
+
+
+
+    {
+      "id": "night_bad",
+      "next": "",
+      "lines": 
+      [
+        {
+          "character": "Narrator",
+          "text": "The Rizzeromometer beeps, prompting you to look at it.",
+          "portrait": "suniAngry",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "HEHEHEHEHE HERE IT COMEEESSSSS",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "A whirring sound suddenly fills the silence.\nLight dainty footsteps can be heard, slowly approaching your door.",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "You and Suni both, waited in anticipation...",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "???",
+          "text": "Hello! My name is SUNI-02, I am the android sent by Slife of Life.",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "SUNI-02",
+          "text": "My sole purpose here, is to hel-",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "TAKE THIS YOU SUSSY SOYJACK BAKA!!!",
+          "portrait": "suniHappy",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "Due to how the bucket was positioned, it fell with a hard clang,\ninstead of pouring the water.",
+          "portrait": "suniSurprise",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "It hits SUNI-02 right on the head with the bottom of the bucket,\nbefore proceeding to spill all over, further sizzling the new android to a crisp.",
+          "portrait": "suniSurprise",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "DOUBLE KO",
+          "portrait": "suniSurprise",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "You.\nAre so cooked.",
+          "portrait": "suniNervous",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "OH SHOOT!",
+          "portrait": "suniNervous",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "Suni ran away, abandoning her friend, RIP x2",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "MY JOBBBBBBBBBB!!!",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "You're fired... what did you expect for meddling with the new android?!?\n'All that is necessary for the triumph of evil is that good men do nothing.' gg smh",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "BAD END",
+          "text": "---Jobless---",
+          "portrait": "",
+          "portrait2": ""
+        }
+      ],
+
+      "choices": 
+      [
+        {
+          "label": "RESTART GAME",
+          "next_scene": "intro",
+          "score_change": -100
+        }
+      ]
+    },
+    
+
+
+    
+
+    {
+      "id": "night_good_neutral",
+      "next": "",
+      "lines": 
+      [
+        {
+          "character": "Narrator",
+          "text": "The Rizzeromometer beeps, prompting you to look at it.",
+          "portrait": "suniAngry",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "No, you need to do something!!!",
+          "portrait": "suniAngry",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "Uh Suni... Look, I think we are a bit too quick about this...?",
+          "portrait": "suniPout",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "Shouldn't we ask them first? Like, why are you here? What's your purpose...?\nThat kinda thing?",
+          "portrait": "suniPout",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "You GOTTA be KIDDING me!",
+          "portrait": "suniAngry",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "Well! I just... aren't you curious too? Why they're really here??",
+          "portrait": "suniPout",
+          "portrait2": ""
+        },
+        {
+          "character": "Suni",
+          "text": "Well....yeah..BUT! ITS TOO LATE HEHEHEEHHEH!!! HERE IT COMES!!!",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "A whirring sound suddenly fills the silence.\nLight dainty footsteps can be heard, slowly approaching your door.",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        }
+      ],
+
+      "choices": 
+      []
+    },
+
+
+
+
+
+    {
+      "id": "night_neutral",
+      "next": "",
+      "lines": 
+      [
+        {
+          "character": "Narrator",
+          "text": "The Rizzeromometer beeps once again...\nWhy do you have a foreboding feeling abotu this?",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "You have to do something!",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "You step forward, but due to insufficient rizz, you hesitate. Bad idea! GG.",
+          "portrait": "suniSurprise",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "However, your movements surpprises the new android, causing her to stop.",
+          "portrait": "suniSurprise",
+          "portrait2": "sukiSurprise"
+        },
+        {
+          "character": "Narrator",
+          "text": "The hunter has become the hunted, and you are now the bucket's victim.",
+          "portrait": "suniSurprise",
+          "portrait2": "sukiSurprise"
+        },
+        {
+          "character": "Narrator",
+          "text": "Due to how the bucket was positioned, it fell with a hard clang,\ninstead of pouring the water.",
+          "portrait": "suniSurprise",
+          "portrait2": "sukiSurprise"
+        },
+        {
+          "character": "Narrator",
+          "text": "Due to how the bucket was positioned, it fell with a hard clang,\ninstead of pouring the water.",
+          "portrait": "suniSurprise",
+          "portrait2": "sukiSurprise"
+        },
+        {
+          "character": "Suni",
+          "text": "NOOOOO NIGHT GUARD-KUN!!!",
+          "portrait": "suniSurprise",
+          "portrait2": "sukiSurprise"
+        },
+        {
+          "character": "???",
+          "text": "W-What's going on?!?",
+          "portrait": "suniSurprise",
+          "portrait2": "sukiSurprise"
+        },
+        {
+          "character": "Narrator",
+          "text": "The last thing you heard, were the two android's panicked screamming.",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "...",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "Well... It seems like your paycheck for the month go to the hospital bill...\nHey, at least you get to keeep your job! Going all out like that to protect them!",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "Though you do get a slap on the wirst for following with Suni's prank idea.\nYou do hope Suni and the new android get along while you're recovering tho...",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "NEUTRAL END",
+          "text": "---Traumatic brain injury---",
+          "portrait": "",
+          "portrait2": ""
+        }
+      ],
+
       "choices": 
       [
         {
@@ -1624,14 +1973,200 @@
 
 
     {
-      "id": "forest",
+      "id": "night_good",
       "next": "",
       "lines": 
       [
         {
           "character": "Narrator",
-          "text": "The forest grows dark...",
-          "portrait": "suniDizzy",
+          "text": "The Rizzeromometer beeps once again, maybe it's your lucky night?",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "You gotta do something!",
+          "portrait": "suniGremlin",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "You ran forward bravely, pushing the new android back!",
+          "portrait": "suniSurprise",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "The android fell safely with an oomf",
+          "portrait": "suniSurprise",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "You, not so much, as you avoided the bucket initially.\nBut with a vengeance, the bucket managed to slashed you completely!",
+          "portrait": "suniSurprise",
+          "portrait2": ""
+        },
+        {
+          "character": "Night Guard",
+          "text": "ARGH ayyya....great... Im WET",
+          "portrait": "suniSurprise",
+          "portrait2": ""
+        },
+        {
+          "character": "???",
+          "text": "Ah! Uh, um... um... are you ok?",
+          "portrait": "suniNervous",
+          "portrait2": "sukiNervous"
+        },
+        {
+          "character": "Night Guard",
+          "text": "Huh? Oh no! Uh, this is a bad first impression eh? Nice to meet you!\nI'm Nile Gerds!",
+          "portrait": "suniPout",
+          "portrait2": "sukiNervous"
+        },
+        {
+          "character": "???",
+          "text": "Ah, hah... Night Guard! Like the job right? Hehe",
+          "portrait": "suniPout",
+          "portrait2": "sukiNeutral"
+        },
+        {
+          "character": "Nile Gerds",
+          "text": "Oh haha well it's actually Nile Ge-",
+          "portrait": "suniPout",
+          "portrait2": "sukiNeutral"
+        },
+        {
+          "character": "???",
+          "text": "Nice to meet you too! Night Guard-san!",
+          "portrait": "suniPout",
+          "portrait2": "sukiNeutral"
+        },
+        {
+          "character": "Night Guard",
+          "text": "...",
+          "portrait": "suniPout",
+          "portrait2": "sukiNeutral"
+        },
+        {
+          "character": "???",
+          "text": " Ahem-\nHello! My name is SUNI-02, I am the android sent by Slife of Life.",
+          "portrait": "suniPout",
+          "portrait2": "sukiNeutral"
+        },
+        {
+          "character": "SUNI-02",
+          "text": "My sole purpose here, is to help as the facility's janitor.",
+          "portrait": "suniPout",
+          "portrait2": "sukiNeutral"
+        },
+        {
+          "character": "Suni",
+          "text": "W-WHAT?",
+          "portrait": "suniSurprise",
+          "portrait2": "sukiNeutral"
+        },
+        {
+          "character": "Night Guard",
+          "text": "Huh...? Suni! And you were sooo worried all over for nothing!",
+          "portrait": "suniPout",
+          "portrait2": "sukiSurprise"
+        },
+        {
+          "character": "SUNI-02",
+          "text": "Suni? Well that's a nice name, I hope we can get along as fellow rizzers!",
+          "portrait": "suniNervous",
+          "portrait2": "sukiNeutral"
+        },
+        {
+          "character": "Suni",
+          "text": "HUH!?!? Oh ME? Uh... Y-you too ig *blushes* (OwO aaauuwooo so embarasing!\nI really though I was going to be replaced!)",
+          "portrait": "suniBlush",
+          "portrait2": "sukiHappy"
+        },
+        {
+          "character": "Suni",
+          "text": "(ME, a much more superior model!!!)",
+          "portrait": "suniBlush",
+          "portrait2": "sukiHappy"
+        },
+        {
+          "character": "Night Guard",
+          "text": "Hahahaha Suni I can you blushing hehehe~",
+          "portrait": "suniBlush",
+          "portrait2": "sukiHappy"
+        },
+        {
+          "character": "Suni",
+          "text": "S-SHUT UP B-BAKA",
+          "portrait": "suniAngry",
+          "portrait2": "sukiHappy"
+        },
+        {
+          "character": "SUNI-02",
+          "text": "Hihihi",
+          "portrait": "suniPout",
+          "portrait2": "sukiHappy"
+        },
+        {
+          "character": "Narrator",
+          "text": "SUNI-02 giggled softly, sounding surpisingly like a real fox.\nWHAT DOES THE FOX SAY?!?",
+          "portrait": "suniNeutral",
+          "portrait2": "sukiHappy"
+        },
+        {
+          "character": "Narrator",
+          "text": "The room fills with sounds of fox giggles.\nIt really works out in the end huh? Phewie",
+          "portrait": "suniNeutral",
+          "portrait2": "sukiHappy"
+        }
+      ],
+
+      "choices": 
+      [
+        {
+          "label": "Laugh along",
+          "next_scene": "rizz_ending",
+          "score_change": 100
+        }
+      ]
+    },
+
+    {
+      "id": "rizz_ending",
+      "next": "",
+      "lines": 
+      [
+        
+        {
+          "character": "Narrator",
+          "text": "Your Rizzeromometer suddenly beeps loudly!",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "It's filled to the brim with powerful rizz!!!",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "This is truly...",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "Narrator",
+          "text": "A Night of Rizzing",
+          "portrait": "",
+          "portrait2": ""
+        },
+        {
+          "character": "GOOD END",
+          "text": "---The Rizzler---",
+          "portrait": "",
           "portrait2": ""
         }
       ],
@@ -1639,14 +2174,9 @@
       "choices": 
       [
         {
-          "label": "Press forward",
-          "next_scene": "path_brave",
-          "score_change": 90
-        },
-        {
-          "label": "Turn back",
-          "next_scene": "path_coward",
-          "score_change": 0
+          "label": "RESTART GAME",
+          "next_scene": "intro",
+          "score_change": -100
         }
       ]
     }

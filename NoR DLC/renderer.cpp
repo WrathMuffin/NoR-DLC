@@ -5,20 +5,25 @@ void Renderer::Load()
 {
     // background = LoadTexture("assets/bg_forest.png");
 
-    spriteSheet[0] = LoadTexture("assets/Suni_128_x_128.png");
+    spriteSheet[0] = LoadTexture("assets/SUNI_128_x_128.png");
     // spriteSheet[1] = LoadTexture("assets/Suni_128_x_128.png");
 
     portraits["suniGremlin"] = {0, 0};      // 0
     portraits["suniAngry"] = {1, 0};        // 1
     portraits["suniNeutral"] = {2, 0};      // 2
-    portraits["suniDizzy"] = {3, 0};        // 3
+    portraits["suniBlush"] = {3, 0};        // 3
     portraits["suniBlank"] = {4, 0};        // 4
-    portraits["suniPout"] = {1, 0};         // 5
-    portraits["suniHappy"] = {3, 0};        // 6
-    portraits["suniBack"] = {4, 0};         // 7
-    portraits["suniSurprise"] = {4, 0};     // 8
-    portraits["suniNervous"] = {0, 0};     // 9
-    portraits["suniBruh"] = {4, 0};     // 9
+    portraits["suniPout"] = {5, 0};         // 5
+    portraits["suniHappy"] = {6, 0};        // 6
+    portraits["suniBack"] = {7, 0};         // 7
+    portraits["suniSurprise"] = {8, 0};     // 8
+    portraits["suniNervous"] = {9, 0};      // 9
+    portraits["suniBruh"] = { 10, 0 };      // 10
+    
+    portraits["sukiNeutral"] = { 10, 0 };   // 11
+    portraits["sukiHappy"] = { 10, 0 };     // 12
+    portraits["sukiSurprise"] = { 10, 0 };  // 13
+    portraits["sukiNervous"] = { 10, 0 };   // 14
 }
 
 // to unload textures to free up memory (at the end of the program)
@@ -132,7 +137,8 @@ void Renderer::DrawPortrait(const string &portrait1, const string &portrait2)
             320 - drawSize,
             drawSize,
             drawSize};
-        DrawTexturePro(spriteSheet[0], spriteSrc2, dest2, {0, 0}, 0.0f, WHITE); // REMEMBER TO CHANGE spriteSheet[1]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        DrawTexturePro(spriteSheet[0], spriteSrc2, dest2, { 0, 0 }, 0.0f, WHITE); // REMEMBER TO CHANGE spriteSheet[1]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        // nah lell i put evrrything in one sprite sheet lmao
     }
 }
 
